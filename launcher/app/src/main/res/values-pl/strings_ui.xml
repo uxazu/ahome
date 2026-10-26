@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Ustawienia</string>
+    <string name="ls_appearance">Wygląd</string>
+    <string name="ls_wallpaper">Tapeta</string>
+    <string name="ls_home">Ekran główny</string>
+    <string name="ls_system">System</string>
+    <string name="ls_on">Włączone</string>
+    <string name="ls_off">Wyłączone</string>
+    <string name="ls_theme">Motyw</string>
+    <string name="ls_launcher_theme_library">Biblioteka motywów</string>
+    <string name="ls_accent_colour">Kolor akcentu</string>
+    <string name="ls_animations">Animacje</string>
+    <string name="ls_advanced_effects">Zaawansowane efekty</string>
+    <string name="ls_highlight_style">Styl podświetlenia</string>
+    <string name="ls_all_theme_options">Wszystkie opcje motywu</string>
+    <string name="ls_every_theme_key">Każdy klucz motywu</string>
+    <string name="ls_animated_wallpaper">Animowana tapeta</string>
+    <string name="ls_style">Styl</string>
+    <string name="ls_palette">Paleta</string>
+    <string name="ls_dark_version_of_the_palette">Ciemna wersja palety</string>
+    <string name="ls_pattern_size">Rozmiar wzoru</string>
+    <string name="ls_dimming">Przyciemnienie</string>
+    <string name="ls_per_palette">zależnie od palety</string>
+    <string name="ls_wallpaper_blur">Rozmycie tapety</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">Tapeta rusza się za listą aplikacji</string>
+    <string name="ls_low">Niska</string>
+    <string name="ls_medium">Średnia</string>
+    <string name="ls_high">Wysoka</string>
+    <string name="ls_maximum">Maksymalna</string>
+    <string name="ls_wallpaper_resolution">Rozdzielczość tapety</string>
+    <string name="ls_your_own_picture">Własny obraz</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Obrazy z folderu tapet motywu</string>
+    <string name="ls_random">Losowo</string>
+    <string name="ls_theme_colours">Kolory motywu</string>
+    <string name="ls_wallpaper_style">Styl tapety</string>
+    <string name="ls_wallpaper_palette">Paleta tapety</string>
+    <string name="ls_dock_apps">Aplikacje w doku</string>
+    <string name="ls_dock_only_on_home">Tylko dok na ekranie głównym</string>
+    <string name="ls_app_search">Wyszukiwanie aplikacji</string>
+    <string name="ls_columns">Kolumny</string>
+    <string name="ls_rows_below_the_dock">Rzędy pod dokiem</string>
+    <string name="ls_dock_opacity">Przezroczystość doku</string>
+    <string name="ls_clock_size">Rozmiar zegara</string>
+    <string name="ls_weather_town">Pogoda: miasto</string>
+    <string name="ls_town_and_weather">Miasto i pogoda</string>
+    <string name="ls_temperature_only">Tylko temperatura</string>
+    <string name="ls_hidden">Ukryte</string>
+    <string name="ls_weather_line">Wiersz pogody</string>
+    <string name="ls_reorder_apps">Zmień kolejność aplikacji</string>
+    <string name="ls_open_on_start">Otwórz przy starcie</string>
+    <string name="ls_follow_the_theme_again">Znów podążaj za motywem</string>
+    <string name="ls_done">Gotowe</string>
+    <string name="ls_default_home">Domyślny ekran główny</string>
+    <string name="ls_tv_settings">Ustawienia telewizora</string>
+    <string name="search_apps">Szukaj aplikacji</string>
+    <string name="all_apps">Wszystkie aplikacje</string>
+    <string-array name="weather_conditions">
+        <item>Bezchmurnie</item>
+        <item>Małe zachmurzenie</item>
+        <item>Pochmurno</item>
+        <item>Mgła</item>
+        <item>Mżawka</item>
+        <item>Deszcz</item>
+        <item>Śnieg</item>
+        <item>Przelotne opady</item>
+        <item>Burza</item>
+    </string-array>
+    <string name="ls_language">Język</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

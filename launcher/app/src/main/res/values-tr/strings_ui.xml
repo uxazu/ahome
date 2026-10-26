@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Ayarlar</string>
+    <string name="ls_appearance">Görünüm</string>
+    <string name="ls_wallpaper">Duvar kâğıdı</string>
+    <string name="ls_home">Ana ekran</string>
+    <string name="ls_system">Sistem</string>
+    <string name="ls_on">Açık</string>
+    <string name="ls_off">Kapalı</string>
+    <string name="ls_theme">Tema</string>
+    <string name="ls_launcher_theme_library">Tema kitaplığı</string>
+    <string name="ls_accent_colour">Vurgu rengi</string>
+    <string name="ls_animations">Animasyonlar</string>
+    <string name="ls_advanced_effects">Gelişmiş efektler</string>
+    <string name="ls_highlight_style">Vurgu stili</string>
+    <string name="ls_all_theme_options">Tüm tema seçenekleri</string>
+    <string name="ls_every_theme_key">Her tema anahtarı</string>
+    <string name="ls_animated_wallpaper">Hareketli duvar kâğıdı</string>
+    <string name="ls_style">Stil</string>
+    <string name="ls_palette">Palet</string>
+    <string name="ls_dark_version_of_the_palette">Paletin koyu sürümü</string>
+    <string name="ls_pattern_size">Desen boyutu</string>
+    <string name="ls_dimming">Karartma</string>
+    <string name="ls_per_palette">palete göre</string>
+    <string name="ls_wallpaper_blur">Duvar kâğıdı bulanıklığı</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">Duvar kâğıdı uygulamaların arkasında hareket eder</string>
+    <string name="ls_low">Düşük</string>
+    <string name="ls_medium">Orta</string>
+    <string name="ls_high">Yüksek</string>
+    <string name="ls_maximum">En yüksek</string>
+    <string name="ls_wallpaper_resolution">Duvar kâğıdı çözünürlüğü</string>
+    <string name="ls_your_own_picture">Kendi resminiz</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Temanın duvar kâğıdı klasöründeki resimler</string>
+    <string name="ls_random">Rastgele</string>
+    <string name="ls_theme_colours">Tema renkleri</string>
+    <string name="ls_wallpaper_style">Duvar kâğıdı stili</string>
+    <string name="ls_wallpaper_palette">Duvar kâğıdı paleti</string>
+    <string name="ls_dock_apps">Dock uygulamaları</string>
+    <string name="ls_dock_only_on_home">Ana ekranda yalnızca dock</string>
+    <string name="ls_app_search">Uygulama arama</string>
+    <string name="ls_columns">Sütun</string>
+    <string name="ls_rows_below_the_dock">Dock altındaki satırlar</string>
+    <string name="ls_dock_opacity">Dock opaklığı</string>
+    <string name="ls_clock_size">Saat boyutu</string>
+    <string name="ls_weather_town">Hava durumu: şehir</string>
+    <string name="ls_town_and_weather">Şehir ve hava durumu</string>
+    <string name="ls_temperature_only">Yalnızca sıcaklık</string>
+    <string name="ls_hidden">Gizli</string>
+    <string name="ls_weather_line">Hava durumu satırı</string>
+    <string name="ls_reorder_apps">Uygulamaları yeniden sırala</string>
+    <string name="ls_open_on_start">Açılışta aç</string>
+    <string name="ls_follow_the_theme_again">Temayı yeniden izle</string>
+    <string name="ls_done">Bitti</string>
+    <string name="ls_default_home">Varsayılan ana ekran</string>
+    <string name="ls_tv_settings">TV ayarları</string>
+    <string name="search_apps">Uygulama ara</string>
+    <string name="all_apps">Tüm uygulamalar</string>
+    <string-array name="weather_conditions">
+        <item>Açık</item>
+        <item>Az bulutlu</item>
+        <item>Kapalı</item>
+        <item>Sis</item>
+        <item>Çisenti</item>
+        <item>Yağmur</item>
+        <item>Kar</item>
+        <item>Sağanak</item>
+        <item>Gök gürültülü fırtına</item>
+    </string-array>
+    <string name="ls_language">Dil</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

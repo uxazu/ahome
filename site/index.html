@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AHome — Material 3 Expressive TV launcher</title>
+<meta name="description" content="AHome is an open-source Material 3 Expressive home screen for Android TV and Google TV with animated generated wallpapers.">
+<meta name="theme-color" content="#1e6bff">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* ===== Colour roles (generated from a blue seed; replaced at run time when you pick another colour) ============= */
+:root {
+  --md-sys-color-primary: #0054d7;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #dbe1ff;
+  --md-sys-color-on-primary-container: #003fa5;
+  --md-sys-color-secondary: #5c5b7d;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e2dfff;
+  --md-sys-color-on-secondary-container: #444465;
+  --md-sys-color-tertiary: #665688;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #eaddff;
+  --md-sys-color-on-tertiary-container: #4e3e6e;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #93000a;
+  --md-sys-color-background: #faf8ff;
+  --md-sys-color-on-background: #181b25;
+  --md-sys-color-surface: #faf8ff;
+  --md-sys-color-on-surface: #181b25;
+  --md-sys-color-surface-variant: #dfe2f2;
+  --md-sys-color-on-surface-variant: #434654;
+  --md-sys-color-surface-dim: #d8d9e7;
+  --md-sys-color-surface-bright: #faf8ff;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f2f3ff;
+  --md-sys-color-surface-container: #ecedfb;
+  --md-sys-color-surface-container-high: #e6e7f5;
+  --md-sys-color-surface-container-highest: #e0e2ef;
+  --md-sys-color-outline: #737685;
+  --md-sys-color-outline-variant: #c3c6d6;
+  --md-sys-color-inverse-surface: #2d303a;
+  --md-sys-color-inverse-on-surface: #eff0fe;
+  --md-sys-color-inverse-primary: #b3c5ff;
+  --md-sys-color-surface-tint: #0054d7;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --md-sys-color-primary: #b3c5ff;
+  --md-sys-color-on-primary: #002b75;
+  --md-sys-color-primary-container: #003fa5;
+  --md-sys-color-on-primary-container: #dbe1ff;
+  --md-sys-color-secondary: #c5c3ea;
+  --md-sys-color-on-secondary: #2d2d4d;
+  --md-sys-color-secondary-container: #444465;
+  --md-sys-color-on-secondary-container: #e2dfff;
+  --md-sys-color-tertiary: #d1bdf6;
+  --md-sys-color-on-tertiary: #372856;
+  --md-sys-color-tertiary-container: #4e3e6e;
+  --md-sys-color-on-tertiary-container: #eaddff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #10131c;
+  --md-sys-color-on-background: #e0e2ef;
+  --md-sys-color-surface: #10131c;
+  --md-sys-color-on-surface: #e0e2ef;
+  --md-sys-color-surface-variant: #434654;
+  --md-sys-color-on-surface-variant: #c3c6d6;
+  --md-sys-color-surface-dim: #10131c;
+  --md-sys-color-surface-bright: #363943;
+  --md-sys-color-surface-container-lowest: #0b0e17;
+  --md-sys-color-surface-container-low: #181b25;
+  --md-sys-color-surface-container: #1c1f29;
+  --md-sys-color-surface-container-high: #272a34;
+  --md-sys-color-surface-container-highest: #32343f;
+  --md-sys-color-outline: #8d909f;
+  --md-sys-color-outline-variant: #434654;
+  --md-sys-color-inverse-surface: #e0e2ef;
+  --md-sys-color-inverse-on-surface: #2d303a;
+  --md-sys-color-inverse-primary: #0054d7;
+  --md-sys-color-surface-tint: #b3c5ff;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --md-sys-color-primary: #b3c5ff;
+  --md-sys-color-on-primary: #002b75;
+  --md-sys-color-primary-container: #003fa5;
+  --md-sys-color-on-primary-container: #dbe1ff;
+  --md-sys-color-secondary: #c5c3ea;
+  --md-sys-color-on-secondary: #2d2d4d;
+  --md-sys-color-secondary-container: #444465;
+  --md-sys-color-on-secondary-container: #e2dfff;
+  --md-sys-color-tertiary: #d1bdf6;
+  --md-sys-color-on-tertiary: #372856;
+  --md-sys-color-tertiary-container: #4e3e6e;
+  --md-sys-color-on-tertiary-container: #eaddff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #10131c;
+  --md-sys-color-on-background: #e0e2ef;
+  --md-sys-color-surface: #10131c;
+  --md-sys-color-on-surface: #e0e2ef;
+  --md-sys-color-surface-variant: #434654;
+  --md-sys-color-on-surface-variant: #c3c6d6;
+  --md-sys-color-surface-dim: #10131c;
+  --md-sys-color-surface-bright: #363943;
+  --md-sys-color-surface-container-lowest: #0b0e17;
+  --md-sys-color-surface-container-low: #181b25;
+  --md-sys-color-surface-container: #1c1f29;
+  --md-sys-color-surface-container-high: #272a34;
+  --md-sys-color-surface-container-highest: #32343f;
+  --md-sys-color-outline: #8d909f;
+  --md-sys-color-outline-variant: #434654;
+  --md-sys-color-inverse-surface: #e0e2ef;
+  --md-sys-color-inverse-on-surface: #2d303a;
+  --md-sys-color-inverse-primary: #0054d7;
+  --md-sys-color-surface-tint: #b3c5ff;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  color-scheme: dark; }
+
+/* ===== Material 3 Expressive tokens: shape, motion (springs), type =========================================== */
+@property --ra { syntax: "<length>"; inherits: true; initial-value: 28px; }
+@property --rb { syntax: "<length>"; inherits: true; initial-value: 28px; }
+:root {
+  --md-sys-shape-corner-extra-small: 4px; --md-sys-shape-corner-small: 8px; --md-sys-shape-corner-medium: 12px; --md-sys-shape-corner-large: 16px; --md-sys-shape-corner-large-increased: 20px; --md-sys-shape-corner-extra-large: 28px; --md-sys-shape-corner-extra-large-increased: 32px; --md-sys-shape-corner-extra-extra-large: 48px; --md-sys-shape-corner-full: 9999px;
+  --shape-xs: var(--md-sys-shape-corner-extra-small); --shape-s: var(--md-sys-shape-corner-small); --shape-m: var(--md-sys-shape-corner-medium); --shape-l: var(--md-sys-shape-corner-large); --shape-li: var(--md-sys-shape-corner-large-increased); --shape-xl: var(--md-sys-shape-corner-extra-large); --shape-xli: var(--md-sys-shape-corner-extra-large-increased); --shape-xxl: var(--md-sys-shape-corner-extra-extra-large); --shape-full: var(--md-sys-shape-corner-full);
+  --fast-spatial: linear(0.000, 0.024, 0.087, 0.177, 0.284, 0.397, 0.511, 0.620, 0.721, 0.809, 0.886, 0.949, 0.999, 1.037, 1.064, 1.082, 1.092, 1.095, 1.093, 1.087, 1.078, 1.068, 1.058, 1.047, 1.037, 1.027, 1.019, 1.011, 1.005, 1.000, 0.997, 0.994, 0.992, 0.991, 0.991, 0.991, 0.992, 0.993, 0.993, 0.994, 0.995, 0.996, 0.997, 1.000); --fast-spatial-t: 350ms;
+  --default-spatial: linear(0.000, 0.016, 0.059, 0.120, 0.192, 0.271, 0.351, 0.431, 0.507, 0.579, 0.645, 0.705, 0.758, 0.805, 0.845, 0.880, 0.910, 0.934, 0.954, 0.970, 0.983, 0.993, 1.001, 1.006, 1.010, 1.013, 1.014, 1.015, 1.015, 1.015, 1.014, 1.013, 1.012, 1.010, 1.009, 1.008, 1.007, 1.006, 1.005, 1.004, 1.003, 1.003, 1.002, 1.000); --default-spatial-t: 420ms;
+  --slow-spatial: linear(0.000, 0.016, 0.057, 0.117, 0.187, 0.264, 0.344, 0.422, 0.498, 0.569, 0.635, 0.695, 0.749, 0.796, 0.837, 0.873, 0.903, 0.928, 0.949, 0.966, 0.980, 0.990, 0.999, 1.005, 1.009, 1.012, 1.014, 1.015, 1.015, 1.015, 1.014, 1.013, 1.012, 1.011, 1.010, 1.009, 1.008, 1.006, 1.005, 1.005, 1.004, 1.003, 1.002, 1.000); --slow-spatial-t: 570ms;
+  --fast-effects: linear(0.000, 0.018, 0.062, 0.123, 0.192, 0.266, 0.339, 0.410, 0.477, 0.539, 0.596, 0.647, 0.693, 0.734, 0.771, 0.802, 0.830, 0.855, 0.876, 0.894, 0.909, 0.923, 0.935, 0.944, 0.953, 0.960, 0.966, 0.972, 0.976, 0.980, 0.983, 0.986, 0.988, 0.990, 0.991, 0.993, 0.994, 0.995, 0.996, 0.996, 0.997, 0.998, 0.998, 1.000); --fast-effects-t: 140ms;
+  --default-effects: linear(0.000, 0.018, 0.064, 0.127, 0.198, 0.273, 0.347, 0.419, 0.487, 0.550, 0.606, 0.658, 0.704, 0.744, 0.780, 0.811, 0.838, 0.862, 0.882, 0.900, 0.915, 0.928, 0.939, 0.948, 0.956, 0.963, 0.969, 0.974, 0.978, 0.982, 0.985, 0.987, 0.989, 0.991, 0.992, 0.994, 0.995, 0.996, 0.996, 0.997, 0.997, 0.998, 0.998, 1.000); --default-effects-t: 220ms;
+  --slow-effects: linear(0.000, 0.017, 0.060, 0.119, 0.187, 0.259, 0.332, 0.402, 0.468, 0.530, 0.587, 0.638, 0.685, 0.726, 0.762, 0.795, 0.823, 0.848, 0.870, 0.888, 0.904, 0.918, 0.930, 0.941, 0.950, 0.957, 0.964, 0.969, 0.974, 0.978, 0.981, 0.984, 0.987, 0.989, 0.991, 0.992, 0.993, 0.994, 0.995, 0.996, 0.997, 0.997, 0.998, 1.000); --slow-effects-t: 300ms;
+  --emphasized: cubic-bezier(.2, 0, 0, 1);
+  --font: "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  --rail: 96px;
+  /* Material Web reads these */
+  --md-ref-typeface-brand: var(--font); --md-ref-typeface-plain: var(--font);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); font: 400 16px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--md-sys-color-primary); }
+md-icon, .ms { font-family: "Material Symbols Rounded"; font-weight: 400; font-style: normal; font-size: 24px; width: 1em; height: 1em; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-flex; align-items: center; justify-content: center; flex: none; overflow: hidden; white-space: nowrap; word-wrap: normal; direction: ltr; font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; -webkit-font-feature-settings: "liga"; font-feature-settings: "liga"; }
+
+/* type scale (Google Sans) */
+.display-l { font-size: clamp(60px, 11vw, 128px); line-height: .95; letter-spacing: -.04em; white-space: nowrap; font-weight: 700; }
+.headline-l { font-size: clamp(32px, 5vw, 56px); line-height: 1.1; letter-spacing: -.02em; font-weight: 700; margin: 0; }
+.headline-s { font-size: 24px; line-height: 1.3; font-weight: 600; margin: 0; }
+.title-l { font-size: 22px; line-height: 1.27; font-weight: 600; margin: 0; }
+.title-m { font-size: 16px; line-height: 1.5; font-weight: 600; letter-spacing: .01em; margin: 0; }
+.body-l { font-size: 18px; line-height: 1.6; letter-spacing: .01em; }
+.label-l { font-size: 14px; line-height: 1.43; font-weight: 600; letter-spacing: .007em; }
+.label-m { font-size: 12px; line-height: 1.33; font-weight: 600; letter-spacing: .04em; }
+
+:focus-visible { outline: 3px solid var(--md-sys-color-primary); outline-offset: 3px; border-radius: var(--md-sys-shape-corner-extra-small); }
+
+/* ===== App shell: navigation rail (expanded) / navigation bar (compact) ======================================= */
+.rail { position: fixed; z-index: 40; left: 0; top: 0; bottom: 0; width: var(--rail); display: none; flex-direction: column; align-items: center; padding: 20px 0; gap: 4px; background: var(--md-sys-color-surface); }
+.rail .logo { width: 56px; height: 56px; border-radius: var(--md-sys-shape-corner-large); margin-bottom: 28px; }
+.rail .grow { flex: 1; }
+.dest { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 80px; padding: 4px 0; border: 0; background: none; color: var(--md-sys-color-on-surface-variant); font: 600 12px/16px var(--font); letter-spacing: .04em; cursor: pointer; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.dest .ind { position: relative; width: 56px; height: 32px; border-radius: var(--shape-full); display: grid; place-items: center; overflow: hidden; isolation: isolate; }
+.dest .ind::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--md-sys-color-secondary-container); transform: scaleX(.2); opacity: 0; transition: transform var(--fast-spatial-t) var(--fast-spatial), opacity var(--fast-effects-t) var(--fast-effects); z-index: -1; }
+.dest md-ripple { border-radius: inherit; }
+.dest:hover .ind { background: color-mix(in srgb, var(--md-sys-color-on-surface) 8%, transparent); }
+.dest[aria-current="true"] { color: var(--md-sys-color-on-surface); }
+.dest[aria-current="true"] .ind::before { transform: scaleX(1); opacity: 1; }
+.dest[aria-current="true"] .ind .ms { color: var(--md-sys-color-on-secondary-container); font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24; }
+.dest .ms { transition: transform var(--fast-spatial-t) var(--fast-spatial); }
+.dest:active .ms { transform: scale(.88); }
+.bar { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; height: 80px; display: flex; justify-content: space-around; align-items: center; padding: 0 8px; background: var(--md-sys-color-surface-container); }
+.bar .dest { width: auto; flex: 1; padding: 12px 0 16px; }
+
+.pane { min-height: 100vh; padding-bottom: 96px; }
+@media (min-width: 840px) { .rail { display: flex; } .bar { display: none; } .pane { margin-left: var(--rail); padding-bottom: 0; } }
+
+/* top app bar */
+.top { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 8px; height: 64px; padding: 0 16px 0 24px; background: var(--md-sys-color-surface); transition: background-color var(--default-effects-t) var(--default-effects), box-shadow var(--default-effects-t) var(--default-effects); }
+.top.scrolled { background: var(--md-sys-color-surface-container); }
+.top .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; text-decoration: none; color: var(--md-sys-color-on-surface); font-size: 22px; font-weight: 700; }
+.top .brand img { width: 36px; height: 36px; border-radius: var(--md-sys-shape-corner-small); }
+@media (min-width: 840px) { .top .brand img { display: none; } .top { padding-left: 32px; } }
+.menu-anchor { position: relative; }
+ }
+
+/* ===== Layout ============================================================================================================= */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+section { padding-top: clamp(56px, 9vw, 112px); }
+.section-head { max-width: 780px; margin-bottom: clamp(24px, 4vw, 40px); }
+.section-head p { margin: 12px 0 0; color: var(--md-sys-color-on-surface-variant); }
+
+/* ===== Hero ============================================================================================================== */
+.hero { padding-top: clamp(16px, 4vw, 40px); }
+.hero .wrap:first-child { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: center; }
+.hero h1 { margin: 20px 0 16px; color: var(--md-sys-color-primary); }
+.hero h1 span { display: inline-block; animation: letter var(--slow-spatial-t) var(--slow-spatial) both; animation-delay: calc(var(--i) * 70ms + 150ms); cursor: default; }
+@keyframes letter { from { opacity: 0; transform: translateY(.45em) scale(.7); font-weight: 700; } }
+.hero .lead { margin: 0 0 32px; max-width: 32em; color: var(--md-sys-color-on-surface-variant); }
+md-assist-chip { --md-assist-chip-container-shape: 9999px; --md-assist-chip-container-height: 40px; --md-assist-chip-label-text-font: var(--font); --md-assist-chip-label-text-weight: 600; --md-assist-chip-label-text-color: var(--md-sys-color-on-secondary-container); --md-assist-chip-outline-color: transparent; --md-assist-chip-container-color: var(--md-sys-color-secondary-container); --md-assist-chip-flat-container-color: var(--md-sys-color-secondary-container); }
+.chip-logo { width: 24px; height: 24px; border-radius: var(--md-sys-shape-corner-small); }
+
+/* connected button group: inner corners are small, the pressed or hovered button rounds off (expressive shape morph) */
+.btn-group { display: flex; flex-wrap: wrap; gap: 2px; }
+.btn-group md-filled-button, .btn-group md-filled-tonal-button { --btn-h: 64px; --md-filled-button-container-height: var(--btn-h); --md-filled-tonal-button-container-height: var(--btn-h); --md-filled-button-label-text-size: 18px; --md-filled-tonal-button-label-text-size: 18px; --md-filled-button-leading-space: 32px; --md-filled-button-trailing-space: 32px; --md-filled-tonal-button-leading-space: 32px; --md-filled-tonal-button-trailing-space: 32px; --md-filled-button-label-text-weight: 600; --md-filled-tonal-button-label-text-weight: 600; transition: --ra var(--fast-spatial-t) var(--fast-spatial), --rb var(--fast-spatial-t) var(--fast-spatial), transform var(--fast-spatial-t) var(--fast-spatial); }
+.btn-group md-filled-button { --ra: 32px; --rb: 8px; --md-filled-button-container-shape-start-start: var(--ra); --md-filled-button-container-shape-end-start: var(--ra); --md-filled-button-container-shape-start-end: var(--rb); --md-filled-button-container-shape-end-end: var(--rb); }
+.btn-group md-filled-tonal-button { --ra: 8px; --rb: 32px; --md-filled-tonal-button-container-shape-start-start: var(--ra); --md-filled-tonal-button-container-shape-end-start: var(--ra); --md-filled-tonal-button-container-shape-start-end: var(--rb); --md-filled-tonal-button-container-shape-end-end: var(--rb); }
+.btn-group md-filled-button:hover, .btn-group md-filled-button:active { --ra: 32px; --rb: 32px; }
+.btn-group md-filled-tonal-button:hover, .btn-group md-filled-tonal-button:active { --ra: 32px; --rb: 32px; }
+.btn-group md-filled-button:active, .btn-group md-filled-tonal-button:active { transform: scale(.97); }
+
+.hero-art { position: relative; width: 100%; max-width: 620px; margin-left: auto; aspect-ratio: 1 / .94; }
+.blob { position: absolute; overflow: visible; animation: spin 60s linear infinite; }
+.blob path { transition: fill var(--default-effects-t) var(--default-effects); }
+.blob.a { width: 78%; right: 0; top: 0; fill: var(--md-sys-color-primary-container); }
+.blob.b { width: 34%; left: -4%; bottom: -2%; fill: var(--md-sys-color-tertiary-container); animation-direction: reverse; animation-duration: 40s; }
+.blob.c { width: 22%; right: 2%; bottom: 4%; fill: var(--md-sys-color-secondary-container); animation-duration: 28s; }
+.tv { position: absolute; left: 0; right: 8%; top: 20%; aspect-ratio: 16 / 9; border-radius: 36px 36px 36px 120px; overflow: hidden; background: var(--md-sys-color-surface-container-high); outline: 1px solid var(--md-sys-color-outline-variant); outline-offset: -1px; transition: border-radius var(--default-spatial-t) var(--default-spatial), transform var(--default-spatial-t) var(--default-spatial); }
+.hero-art:hover .tv { border-radius: 120px 36px 36px 36px; transform: rotate(-1.5deg) scale(1.02); }
+.tv img { width: 100%; height: 100%; object-fit: cover; }
+.float { position: absolute; left: 2%; top: 4%; display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px 0 8px; border-radius: var(--md-sys-shape-corner-full); background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface);  font-weight: 600; font-size: 14px; animation: bob 5s var(--default-spatial) infinite alternate; }
+.float i { width: 32px; height: 32px; border-radius: 50%; background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); display: grid; place-items: center; }
+.float i .ms { font-size: 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes bob { to { transform: translateY(-12px); } }
+@supports (animation-timeline: scroll()) {
+  .blob.a, .blob.b { animation: spin 60s linear infinite, drift linear both; animation-timeline: auto, scroll(root); animation-range: normal, 0 60vh; }
+  @keyframes drift { to { translate: 0 -48px; } }
+}
+
+/* ===== Cards (filled, elevated, outlined: shape morph on hover, press scale, ripple) ==================== */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: clamp(40px, 7vw, 80px); }
+.card { position: relative; display: block; overflow: hidden; padding: 28px; border-radius: var(--ra); --ra: 28px; transition: --ra var(--fast-spatial-t) var(--fast-spatial), transform var(--fast-spatial-t) var(--fast-spatial), box-shadow var(--fast-effects-t) var(--fast-effects); isolation: isolate; }
+.card.hover:hover { --ra: 44px; transform: translateY(-4px); }
+.card.hover:active { transform: scale(.98); }
+.card md-ripple { border-radius: inherit; --md-ripple-hover-opacity: 0; }
+.card md-elevation { --md-elevation-level: 1; }
+.card.hover:hover md-elevation { --md-elevation-level: 3; }
+.stat { background: var(--md-sys-color-surface-container-low); }
+.stat b { display: block; font-size: clamp(40px, 6vw, 72px); line-height: 1; color: var(--md-sys-color-primary); font-weight: 700; letter-spacing: -.03em; }
+.stat span { color: var(--md-sys-color-on-surface-variant); font-weight: 500; }
+.stat:nth-child(1) { --ra: 28px 28px 28px 56px; } .stat:nth-child(2) { --ra: 56px 28px 28px 28px; } .stat:nth-child(3) { --ra: 28px 56px 28px 28px; } .stat:nth-child(4) { --ra: 28px 28px 56px 28px; }
+
+.bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.bento .card .ic { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; margin-bottom: 36px; background: var(--md-sys-color-surface); color: var(--md-sys-color-primary); transition: transform var(--default-spatial-t) var(--default-spatial), border-radius var(--default-spatial-t) var(--default-spatial); }
+.bento .card:hover .ic { transform: rotate(-8deg) scale(1.08); border-radius: var(--md-sys-shape-corner-large); }
+.bento h3 { margin-bottom: 8px; }
+.bento p { margin: 0; opacity: .88; max-width: 34em; }
+.c1 { grid-column: span 4; min-height: 300px; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.c1 .ic { background: var(--md-sys-color-on-primary-container); color: var(--md-sys-color-primary-container); }
+.c2 { grid-column: span 2; background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.c3 { grid-column: span 2; background: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.c4 { grid-column: span 2; background: var(--md-sys-color-surface-container-high); }
+.c5 { grid-column: span 2; background: var(--md-sys-color-surface-container-highest); box-shadow: inset 0 0 0 1px var(--md-sys-color-outline-variant); }
+.c6 { grid-column: span 6; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; background: color-mix(in srgb, var(--md-sys-color-primary) 14%, var(--md-sys-color-surface-container-high)); color: var(--md-sys-color-on-surface); }
+.c6 .ic { margin: 0 !important; background: var(--md-sys-color-primary-container) !important; color: var(--md-sys-color-on-primary-container) !important; }
+.c1::after { content: ""; position: absolute; right: -70px; bottom: -70px; width: 260px; height: 260px; background: color-mix(in srgb, var(--md-sys-color-on-primary-container) 12%, transparent); clip-path: url(#morph2); animation: spin 50s linear infinite; z-index: -1; }
+
+/* staggered spring entrance */
+.reveal { opacity: 0; transform: translateY(24px) scale(.97); }
+.reveal.in { opacity: 1; transform: none; transition: opacity var(--slow-effects-t) var(--slow-effects), transform var(--slow-spatial-t) var(--slow-spatial); transition-delay: calc(var(--i, 0) * 45ms); }
+.card.reveal.in { transition: opacity var(--slow-effects-t) var(--slow-effects) calc(var(--i, 0) * 45ms), transform var(--slow-spatial-t) var(--slow-spatial) calc(var(--i, 0) * 45ms), --ra var(--fast-spatial-t) var(--fast-spatial), box-shadow var(--fast-effects-t) var(--fast-effects); }
+
+/* ===== Carousel (hero carousel: items grow and shrink with the scroll position) ================================ */
+.carousel { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px max(16px, calc((100vw - var(--rail) - 1160px) / 2)) 16px; scrollbar-width: none; align-items: center; }
+.carousel { cursor: grab; touch-action: pan-x pan-y; overscroll-behavior-x: contain; }
+.carousel.drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+.carousel img { -webkit-user-drag: none; }
+.carousel::-webkit-scrollbar { display: none; }
+.slide { position: relative; flex: 0 0 min(76%, 840px); aspect-ratio: 16 / 9; scroll-snap-align: center; border: 0; padding: 0; border-radius: var(--shape-xl); overflow: hidden; background: var(--md-sys-color-surface-container-high); cursor: pointer; transition: border-radius var(--default-spatial-t) var(--default-spatial); }
+@supports (animation-timeline: view()) {
+  .slide { animation: focus linear both; animation-timeline: view(inline); }
+  @keyframes focus { 0% { transform: scale(.92); opacity: .7; } 50% { transform: scale(1); opacity: 1; } 100% { transform: scale(.92); opacity: .7; } }
+}
+.slide:hover { border-radius: var(--shape-xxl); }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+.slide .cap { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; height: 40px; padding: 0 18px; border-radius: var(--md-sys-shape-corner-full); background: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface); font-weight: 600; font-size: 14px; }
+.head-row { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.head-row md-filled-tonal-icon-button { --md-filled-tonal-icon-button-container-shape: 9999px; }
+.ctrl { display: flex; gap: 8px; }
+@media (max-width: 620px) { .ctrl { display: none; } }
+md-dialog { --md-dialog-container-shape: 28px; --md-dialog-container-color: var(--md-sys-color-surface-container-high); max-width: min(96vw, 1100px); min-width: min(96vw, 900px); }
+md-dialog img { width: 100%; border-radius: var(--md-sys-shape-corner-large); }
+::view-transition-group(shot) { animation-duration: var(--default-spatial-t); animation-timing-function: var(--default-spatial); }
+
+/* ===== Wallpapers and dynamic colour ================================================================================ */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+.seeds { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.seed { width: 56px; height: 56px; border: 0; border-radius: 50%; cursor: pointer; position: relative; background: var(--c); display: grid; place-items: center; color: #fff; transition: border-radius var(--fast-spatial-t) var(--fast-spatial), transform var(--fast-spatial-t) var(--fast-spatial); }
+.seed:hover { border-radius: var(--md-sys-shape-corner-large); transform: scale(1.08); }
+.seed .ms { opacity: 0; transform: scale(.4); transition: opacity var(--fast-effects-t) var(--fast-effects), transform var(--fast-spatial-t) var(--fast-spatial); }
+.seed[aria-pressed="true"] { border-radius: var(--md-sys-shape-corner-large); }
+.seed[aria-pressed="true"] .ms { opacity: 1; transform: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+md-assist-chip.plain { --md-assist-chip-container-shape: 8px; --md-assist-chip-container-color: transparent; --md-assist-chip-flat-container-color: transparent; --md-assist-chip-outline-color: var(--md-sys-color-outline-variant); --md-assist-chip-label-text-color: var(--md-sys-color-on-surface-variant); --md-assist-chip-label-text-weight: 500; }
+.pals { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 10px; margin-top: 28px; }
+.pal { border-radius: var(--ra); --ra: 20px; overflow: hidden; background: var(--md-sys-color-surface-container); transition: --ra var(--fast-spatial-t) var(--fast-spatial), transform var(--fast-spatial-t) var(--fast-spatial); }
+.pal:hover { --ra: 32px; transform: translateY(-3px); }
+.pal div { display: flex; height: 56px; } .pal i { flex: 1; }
+.pal span { display: block; padding: 8px 14px 12px; font-size: 13px; font-weight: 600; color: var(--md-sys-color-on-surface-variant); }
+
+.langbox { border-radius: var(--shape-xxl); padding: clamp(24px, 4vw, 56px); background: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.langbox p { max-width: 38em; margin: 12px 0 28px; }
+.langbox md-assist-chip { --md-assist-chip-container-color: color-mix(in srgb, var(--md-sys-color-on-secondary-container) 10%, transparent); --md-assist-chip-flat-container-color: color-mix(in srgb, var(--md-sys-color-on-secondary-container) 10%, transparent); --md-assist-chip-label-text-color: var(--md-sys-color-on-secondary-container); --md-assist-chip-container-shape: 9999px; }
+
+/* ===== Install ================================================================================================================ */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; counter-reset: s; }
+.step { counter-increment: s; background: var(--md-sys-color-surface-container-low); }
+.step::before { content: counter(s); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font-weight: 700; font-size: 18px; margin-bottom: 20px; transition: border-radius var(--default-spatial-t) var(--default-spatial); }
+.step:hover::before { border-radius: var(--md-sys-shape-corner-medium); }
+.step p { margin: 6px 0 0; color: var(--md-sys-color-on-surface-variant); }
+md-tabs { --md-primary-tab-container-color: transparent; --md-primary-tab-label-text-font: var(--font); --md-primary-tab-label-text-weight: 600; margin-top: 28px; max-width: 360px; --md-primary-tab-active-indicator-height: 3px; }
+.panel[hidden] { display: none; }
+.code { position: relative; margin-top: 12px; padding: 24px 80px 24px 28px; border-radius: var(--shape-xl); background: var(--md-sys-color-surface-container-highest); font: 400 15px/1.8 var(--mono); white-space: pre; overflow-x: auto; animation: pop var(--default-spatial-t) var(--default-spatial); }
+.code md-icon-button { position: absolute; right: 12px; top: 12px; }
+@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+.note { margin: 14px 4px 0; color: var(--md-sys-color-on-surface-variant); }
+
+footer { margin-top: clamp(64px, 10vw, 128px); padding: 40px 0 56px; background: var(--md-sys-color-surface-container); border-radius: var(--shape-xxl) var(--shape-xxl) 0 0; }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; }
+footer p { margin: 0; color: var(--md-sys-color-on-surface-variant); }
+footer .brand { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; }
+footer .brand img { width: 40px; height: 40px; border-radius: var(--md-sys-shape-corner-medium); }
+
+/* FAB (extended, appears once the hero is gone) and snackbar */
+.fab { position: fixed; z-index: 35; right: 24px; bottom: 24px; transform: translateY(160px) scale(.8); opacity: 0; transition: transform var(--default-spatial-t) var(--default-spatial), opacity var(--default-effects-t) var(--default-effects); }
+.fab.show { transform: none; opacity: 1; }
+@media (max-width: 839px) { .fab { bottom: 96px; } }
+.snack { position: fixed; z-index: 90; left: 50%; bottom: 24px; display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 20px; border-radius: var(--shape-xs); background: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); font-size: 14px;  transform: translate(-50%, 140px); opacity: 0; pointer-events: none; transition: transform var(--default-spatial-t) var(--default-spatial), opacity var(--fast-effects-t) var(--fast-effects); }
+.snack.show { transform: translate(-50%, 0); opacity: 1; }
+@media (max-width: 839px) { .snack { bottom: 96px; } }
+
+@media (max-width: 980px) {
+  .hero .wrap:first-child, .split { grid-template-columns: 1fr; }
+  .hero-art { margin: 0 auto; max-width: 480px; }
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .c1, .c6 { grid-column: span 2; } .c2, .c3, .c4, .c5 { grid-column: span 1; }
+  .steps { grid-template-columns: 1fr; } .stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .bento { grid-template-columns: 1fr; } .c1, .c2, .c3, .c4, .c5, .c6 { grid-column: auto; } .c6 { grid-template-columns: 1fr; }
+  .slide { flex-basis: 88%; } #langName { display: none; }
+}
+
+/* icons inside buttons and chips follow the component's 18px icon slot */
+.ms[slot="icon"] { font-size: 18px; }
+md-icon-button .ms, md-filled-tonal-icon-button .ms { font-size: 24px; }
+md-fab .ms { font-size: 24px; }
+.btn-group .ms[slot="icon"] { font-size: 24px; }
+md-text-button, md-filled-tonal-button { --md-text-button-icon-size: 18px; --md-filled-tonal-button-icon-size: 18px; }
+.top { gap: 4px; }
+.top md-text-button, .top md-filled-tonal-button { --md-text-button-container-height: 40px; --md-filled-tonal-button-container-height: 40px; }
+
+/* spacing: 8dp grid, generous gutters next to the rail */
+@media (min-width: 840px) {
+  .wrap { padding-inline: clamp(32px, 5vw, 72px); }
+  .top { padding-left: 40px; padding-right: 24px; }
+}
+.hero .wrap:first-child { padding-top: 8px; }
+.hero h1 { margin: 24px 0 24px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.skip { position: fixed; left: 16px; top: -64px; z-index: 100; padding: 12px 20px; border-radius: var(--md-sys-shape-corner-full); background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); font-weight: 600; text-decoration: none; transition: top var(--fast-spatial-t) var(--fast-spatial); }
+.skip:focus { top: 16px; }
+.bar .dest .ind { width: 64px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#features">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><clipPath id="morph2" clipPathUnits="objectBoundingBox"><path d="M0.9800 0.5000 L0.9710 0.5309 L0.9462 0.5587 L0.9119 0.5819 L0.8767 0.6009 L0.8485 0.6183 L0.8326 0.6378 L0.8301 0.6628 L0.8377 0.6950 L0.8492 0.7333 L0.8570 0.7739 L0.8548 0.8112 L0.8394 0.8394 L0.8112 0.8548 L0.7739 0.8570 L0.7333 0.8492 L0.6950 0.8377 L0.6628 0.8301 L0.6378 0.8326 L0.6183 0.8485 L0.6009 0.8767 L0.5819 0.9119 L0.5587 0.9462 L0.5309 0.9710 L0.5000 0.9800 L0.4691 0.9710 L0.4413 0.9462 L0.4181 0.9119 L0.3991 0.8767 L0.3817 0.8485 L0.3622 0.8326 L0.3372 0.8301 L0.3050 0.8377 L0.2667 0.8492 L0.2261 0.8570 L0.1888 0.8548 L0.1606 0.8394 L0.1452 0.8112 L0.1430 0.7739 L0.1508 0.7333 L0.1623 0.6950 L0.1699 0.6628 L0.1674 0.6378 L0.1515 0.6183 L0.1233 0.6009 L0.0881 0.5819 L0.0538 0.5587 L0.0290 0.5309 L0.0200 0.5000 L0.0290 0.4691 L0.0538 0.4413 L0.0881 0.4181 L0.1233 0.3991 L0.1515 0.3817 L0.1674 0.3622 L0.1699 0.3372 L0.1623 0.3050 L0.1508 0.2667 L0.1430 0.2261 L0.1452 0.1888 L0.1606 0.1606 L0.1888 0.1452 L0.2261 0.1430 L0.2667 0.1508 L0.3050 0.1623 L0.3372 0.1699 L0.3622 0.1674 L0.3817 0.1515 L0.3991 0.1233 L0.4181 0.0881 L0.4413 0.0538 L0.4691 0.0290 L0.5000 0.0200 L0.5309 0.0290 L0.5587 0.0538 L0.5819 0.0881 L0.6009 0.1233 L0.6183 0.1515 L0.6378 0.1674 L0.6628 0.1699 L0.6950 0.1623 L0.7333 0.1508 L0.7739 0.1430 L0.8112 0.1452 L0.8394 0.1606 L0.8548 0.1888 L0.8570 0.2261 L0.8492 0.2667 L0.8377 0.3050 L0.8301 0.3372 L0.8326 0.3622 L0.8485 0.3817 L0.8767 0.3991 L0.9119 0.4181 L0.9462 0.4413 L0.9710 0.4691 Z"/></clipPath></defs>
+</svg>
+
+<!-- navigation rail (wide screens) -->
+<nav class="rail" aria-label="Sections">
+  <img class="logo" src="logo.png" alt="AHome">
+  <a class="dest" href="#home" aria-current="true"><span class="ind"><md-ripple></md-ripple><span class="ms">home</span></span><span class="lbl" data-t="n_home">Home</span></a>
+  <a class="dest" href="#features" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">widgets</span></span><span class="lbl" data-t="f_nav">Features</span></a>
+  <a class="dest" href="#screens" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">image</span></span><span class="lbl" data-t="s_nav">Screenshots</span></a>
+  <a class="dest" href="#wallpapers" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">palette</span></span><span class="lbl" data-t="n_wall">Wallpapers</span></a>
+  <a class="dest" href="#install" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">download</span></span><span class="lbl" data-t="ih">Install</span></a>
+  <div class="grow"></div>
+  <md-icon-button id="themeBtn2" aria-label="Toggle theme"><span class="ms">dark_mode</span></md-icon-button>
+</nav>
+
+<div class="pane">
+  <header class="top" id="top">
+    <a class="brand" href="#home"><img src="logo.png" alt="" width="36" height="36">AHome</a>
+    <div class="menu-anchor">
+      <md-text-button id="langBtn" aria-haspopup="menu"><span class="ms" slot="icon">language</span><span id="langName">English</span></md-text-button>
+      <md-menu id="langMenu" anchor="langBtn" positioning="popover"></md-menu>
+    </div>
+    <md-icon-button id="themeBtn" aria-label="Toggle theme"><span class="ms">dark_mode</span></md-icon-button>
+    <md-filled-tonal-button href="https://github.com/uxazu/ahome" target="_blank" rel="noopener"><span class="ms" slot="icon">open_in_new</span>GitHub</md-filled-tonal-button>
+    </header>
+
+  <main id="main">
+    <section class="hero" id="home" data-nav>
+      <div class="wrap">
+        <div>
+          <div class="chip-row"><md-assist-chip label="Open-source TV launcher" data-t-label="over"><img slot="icon" class="chip-logo" src="logo.png" alt=""></md-assist-chip><md-assist-chip label="v1.0.0"></md-assist-chip></div>
+          <h1 class="display-l" aria-label="AHome"><span style="--i:0">A</span><span style="--i:1">H</span><span style="--i:2">o</span><span style="--i:3">m</span><span style="--i:4">e</span></h1>
+          <p class="lead body-l" data-t="lead">A Material 3 Expressive home screen for Android TV and Google TV, with animated generated wallpapers.</p>
+          <div class="btn-group">
+            <md-filled-button href="https://github.com/uxazu/ahome" target="_blank" rel="noopener"><span class="ms" slot="icon">download</span><span data-t="get">Get it on GitHub</span></md-filled-button>
+            <md-filled-tonal-button href="#install"><span data-t="how">How to install</span></md-filled-tonal-button>
+          </div>
+        </div>
+        <div class="hero-art" id="heroArt" aria-hidden="true">
+          <svg class="blob a" viewBox="0 0 100 100"><path/></svg>
+          <svg class="blob b" viewBox="0 0 100 100"><path/></svg>
+          <svg class="blob c" viewBox="0 0 100 100"><path/></svg>
+          <div class="tv"><img src="img/home.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div>
+          <div class="float"><md-elevation style="--md-elevation-level:2"></md-elevation><i><span class="ms">auto_awesome</span></i>Material 3 Expressive</div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="stats">
+          <div class="card stat hover reveal" style="--i:0"><md-ripple></md-ripple><b data-count="21">21</b><span data-t="s1">wallpaper styles</span></div>
+          <div class="card stat hover reveal" style="--i:1"><md-ripple></md-ripple><b data-count="33">33</b><span data-t="s2">palettes</span></div>
+          <div class="card stat hover reveal" style="--i:2"><md-ripple></md-ripple><b data-count="27">27</b><span data-t="s3">languages</span></div>
+          <div class="card stat hover reveal" style="--i:3"><md-ripple></md-ripple><b>MIT</b><span>0 trackers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" data-nav><div class="wrap">
+      <div class="section-head reveal"><h2 class="headline-l" data-t="f_nav">Features</h2></div>
+      <div class="bento">
+        <article class="card hover c1 reveal" style="--i:0"><md-ripple></md-ripple><div class="ic"><span class="ms">palette</span></div><h3 class="headline-s" data-t="f1h">Material 3 Expressive</h3><p class="body-l" data-t="f1p">Tonal surfaces, big rounded shapes, a clear focus ring and spring motion, by default.</p></article>
+        <article class="card hover c2 reveal" style="--i:1"><md-ripple></md-ripple><div class="ic"><span class="ms">wallpaper</span></div><h3 class="title-l" data-t="f2h">Living wallpapers</h3><p data-t="f2p">21 generated styles and 33 palettes, drawn live and frosted behind your apps.</p></article>
+        <article class="card hover c3 reveal" style="--i:2"><md-ripple></md-ripple><div class="ic"><span class="ms">home</span></div><h3 class="title-l" data-t="f3h">Calm home page</h3><p data-t="f3p">Only your dock, the clock and the weather. Press Down for search and every app.</p></article>
+        <article class="card hover c4 reveal" style="--i:3"><md-ripple></md-ripple><div class="ic"><span class="ms">bolt</span></div><h3 class="title-l" data-t="f4h">Made for weak TVs</h3><p data-t="f4p">Its own render thread for wallpapers, paced remote keys and a tiny 0.6 MB package.</p></article>
+        <article class="card hover c5 reveal" style="--i:4"><md-ripple></md-ripple><div class="ic"><span class="ms">translate</span></div><h3 class="title-l" data-t="f5h">Your language</h3><p data-t="f5p">English by default; follows the system language and ships with 27 translations.</p></article>
+        <article class="card hover c6 reveal" style="--i:5"><md-ripple></md-ripple><div class="ic"><span class="ms">lock</span></div><div><h3 class="title-l" data-t="f6h">Private</h3><p data-t="f6p">No accounts, no analytics. The only network request is the optional weather line.</p></div></article>
+      </div>
+    </div></section>
+
+    <section id="screens" data-nav>
+      <div class="wrap head-row reveal">
+        <div class="section-head" style="margin:0"><h2 class="headline-l" data-t="shots_h">Screenshots</h2></div>
+        <div class="ctrl"><md-filled-tonal-icon-button id="prev" aria-label="Previous"><span class="ms">arrow_back</span></md-filled-tonal-icon-button><md-filled-tonal-icon-button id="next" aria-label="Next"><span class="ms">arrow_forward</span></md-filled-tonal-icon-button></div>
+      </div>
+      <div class="carousel" id="carousel" style="margin-top:28px">
+        <button class="slide" type="button"><img src="img/home.jpg" alt="AHome home screen" loading="lazy" width="1920" height="1080"><span class="cap" data-t="c1">Home</span></button>
+        <button class="slide" type="button"><img src="img/apps.jpg" alt="Search and all apps" loading="lazy" width="1920" height="1080"><span class="cap" data-t="c2">All apps</span></button>
+        <button class="slide" type="button"><img src="img/styles.jpg" alt="Wallpaper styles" loading="lazy" width="1920" height="1080"><span class="cap" data-t="c3">Wallpaper styles</span></button>
+        <button class="slide" type="button"><img src="img/palettes.jpg" alt="Wallpaper palettes" loading="lazy" width="1920" height="1080"><span class="cap" data-t="c4">Palettes</span></button>
+        <button class="slide" type="button"><img src="img/settings.jpg" alt="Settings" loading="lazy" width="1920" height="1080"><span class="cap" data-t="c5">Settings</span></button>
+      </div>
+    </section>
+
+    <section id="wallpapers" data-nav><div class="wrap split">
+      <div class="reveal">
+        <h2 class="headline-l" data-t="wp_h">Wallpapers that move</h2>
+        <p class="body-l" style="color:var(--md-sys-color-on-surface-variant)" data-t="wp_p">Every style is generated from a seed and drawn live on its own thread, so no two homes look alike. Pick one from a grid of previews, or let AHome surprise you.</p>
+        <div class="pals" id="pals"></div>
+      </div>
+      <div class="reveal" style="--i:1">
+        <h3 class="headline-s" data-t="dyn_h">Make it yours</h3>
+        <p style="color:var(--md-sys-color-on-surface-variant)" data-t="dyn_p">Dynamic colour is Material 3's way to be personal. Pick a seed and every surface of this page, and of AHome on your TV, is regenerated from it.</p>
+        <div class="seeds" id="seeds" role="group" aria-label="Seed colour"></div>
+        <div class="chips" id="styles" style="margin-top:32px"></div>
+      </div>
+    </div></section>
+
+    <section id="languages" data-nav-skip><div class="wrap reveal">
+      <div class="langbox">
+        <h2 class="headline-l" data-t="lang_h">Speaks your language</h2>
+        <p class="body-l" data-t="lang_p">English by default; the interface follows the system language, and you can pick another one in the settings.</p>
+        <div class="chips" id="langs"></div>
+      </div>
+    </div></section>
+
+    <section id="install" data-nav><div class="wrap">
+      <div class="section-head reveal"><h2 class="headline-l" data-t="ih">Install</h2><p class="body-l" data-t="ip">You need Android TV or Google TV with Android 8.0 or newer and ADB access. Build the APK from the repository, then:</p></div>
+      <div class="steps">
+        <div class="card step hover reveal" style="--i:0"><md-ripple></md-ripple><h3 class="title-l" data-t="st1">Get the APK</h3><p>GitHub → Releases</p></div>
+        <div class="card step hover reveal" style="--i:1"><md-ripple></md-ripple><h3 class="title-l" data-t="st2">Install over ADB</h3><p>Android 8.0+</p></div>
+        <div class="card step hover reveal" style="--i:2"><md-ripple></md-ripple><h3 class="title-l" data-t="st3">Make it your Home</h3><p data-t="ip2">Press Home and choose AHome as the default launcher.</p></div>
+      </div>
+      <md-tabs id="tabs" class="reveal"><md-primary-tab id="t-adb" aria-controls="p-adb">ADB</md-primary-tab><md-primary-tab id="t-build" aria-controls="p-build">Build</md-primary-tab></md-tabs>
+      <div class="panel" id="p-adb" role="tabpanel"><div class="code"><md-icon-button data-copy aria-label="Copy"><span class="ms">content_copy</span></md-icon-button><code>adb connect &lt;tv-ip&gt;:5555
+adb install -r app-release.apk</code></div></div>
+      <div class="panel" id="p-build" role="tabpanel" hidden><div class="code"><md-icon-button data-copy aria-label="Copy"><span class="ms">content_copy</span></md-icon-button><code>git clone https://github.com/uxazu/ahome
+cd ahome/launcher
+./gradlew assembleRelease</code></div></div>
+      <p class="note">JDK 17 · Android SDK 34</p>
+    </div></section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand"><img src="logo.png" alt="" width="40" height="40">AHome</div>
+      <p><span data-t="by">Made by</span> <b>uxazu</b> · v1.0.0 · MIT · <a href="https://github.com/uxazu/ahome">GitHub</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- navigation bar (compact screens) -->
+<nav class="bar" aria-label="Sections"><a class="dest" href="#home" aria-current="true"><span class="ind"><md-ripple></md-ripple><span class="ms">home</span></span><span class="lbl" data-t="n_home">Home</span></a>
+  <a class="dest" href="#features" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">widgets</span></span><span class="lbl" data-t="f_nav">Features</span></a>
+  <a class="dest" href="#screens" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">image</span></span><span class="lbl" data-t="s_nav">Screenshots</span></a>
+  <a class="dest" href="#wallpapers" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">palette</span></span><span class="lbl" data-t="n_wall">Wallpapers</span></a>
+  <a class="dest" href="#install" aria-current="false"><span class="ind"><md-ripple></md-ripple><span class="ms">download</span></span><span class="lbl" data-t="ih">Install</span></a></nav>
+
+<md-fab class="fab" id="fab" size="large" label="GitHub" variant="primary" aria-label="GitHub"><span class="ms" slot="icon">star</span></md-fab>
+<div class="snack" id="snack" role="status"><md-elevation style="--md-elevation-level:3"></md-elevation><span id="snackText">Copied</span></div>
+<md-dialog id="viewer"><div slot="headline" id="viewerTitle"></div><form slot="content" method="dialog"><img id="viewerImg" alt=""></form><div slot="actions"><md-text-button form="x" id="viewerClose">OK</md-text-button></div></md-dialog>
+
+<script src="vendor/color.min.js"></script>
+<script src="vendor/material-web.min.js"></script>
+<script>
+var I18N = {"en": {"lead": "A Material 3 Expressive home screen for Android TV and Google TV, with animated generated wallpapers.", "get": "Get it on GitHub", "how": "How to install", "f1h": "Material 3 Expressive", "f1p": "Tonal surfaces, big rounded shapes, a clear focus ring and spring motion, by default.", "f2h": "Living wallpapers", "f2p": "21 generated styles and 33 palettes, drawn live and frosted behind your apps.", "f3h": "Calm home page", "f3p": "Only your dock, the clock and the weather. Press Down for search and every app.", "f4h": "Made for weak TVs", "f4p": "Its own render thread for wallpapers, paced remote keys and a tiny 0.6 MB package.", "f5h": "Your language", "f5p": "English by default; follows the system language and ships with 27 translations.", "f6h": "Private", "f6p": "No accounts, no analytics. The only network request is the optional weather line.", "ih": "Install", "ip": "You need Android TV or Google TV with Android 8.0 or newer and ADB access. Build the APK from the repository, then:", "ip2": "Press Home and choose AHome as the default launcher.", "by": "Made by", "f_nav": "Features", "s_nav": "Screenshots", "over": "Open-source TV launcher", "s1": "wallpaper styles", "s2": "palettes", "s3": "languages", "shots_h": "Screenshots", "c1": "Home", "c2": "All apps", "c3": "Wallpaper styles", "c4": "Palettes", "c5": "Settings", "wp_h": "Wallpapers that move", "wp_p": "Every style is generated from a seed and drawn live on its own thread, so no two homes look alike. Pick one from a grid of previews, or let AHome surprise you.", "lang_h": "Speaks your language", "lang_p": "English by default; the interface follows the system language, and you can pick another one in the settings.", "st1": "Get the APK", "st2": "Install over ADB", "st3": "Make it your Home", "copy": "Copy", "copied": "Copied", "n_home": "Home", "n_wall": "Wallpapers", "n_lang": "Languages", "dyn_h": "Make it yours", "dyn_p": "Dynamic colour is Material 3's way to be personal. Pick a seed and every surface of this page, and of AHome on your TV, is regenerated from it."}, "ru": {"lead": "Домашний экран в стиле Material 3 Expressive для Android TV и Google TV с живыми генерируемыми обоями.", "get": "Скачать на GitHub", "how": "Как установить", "f1h": "Material 3 Expressive", "f1p": "Тональные поверхности, крупные скругления, заметный фокус и пружинная анимация — из коробки.", "f2h": "Живые обои", "f2p": "21 стиль и 33 палитры, рисуются на лету и размываются за приложениями.", "f3h": "Спокойная главная", "f3p": "Только док, часы и погода. Вниз — поиск и все приложения.", "f4h": "Для слабых ТВ", "f4p": "Обои на отдельном потоке, ровные нажатия пульта и пакет всего 0,6 МБ.", "f5h": "Ваш язык", "f5p": "По умолчанию английский, дальше язык системы; 27 переводов.", "f6h": "Приватно", "f6p": "Без аккаунтов и аналитики. Единственный запрос в сеть — строка погоды (по желанию).", "ih": "Установка", "ip": "Нужен Android TV или Google TV с Android 8.0+ и доступом по ADB. Соберите APK из репозитория и выполните:", "ip2": "Нажмите Home и выберите AHome лаунчером по умолчанию.", "by": "Автор", "f_nav": "Возможности", "s_nav": "Скриншоты", "over": "Лаунчер для ТВ с открытым кодом", "s1": "стиля обоев", "s2": "палитры", "s3": "языков", "shots_h": "Скриншоты", "c1": "Главная", "c2": "Все приложения", "c3": "Стили обоев", "c4": "Палитры", "c5": "Настройки", "wp_h": "Обои, которые двигаются", "wp_p": "Каждый стиль строится из случайного зерна и рисуется на лету в отдельном потоке — двух одинаковых главных экранов не будет. Выбирайте по превью или доверьтесь случаю.", "lang_h": "Говорит на вашем языке", "lang_p": "По умолчанию английский; интерфейс следует языку системы, а другой язык можно выбрать в настройках.", "st1": "Получите APK", "st2": "Установите через ADB", "st3": "Сделайте главным экраном", "copy": "Копировать", "copied": "Скопировано", "n_home": "Главная", "n_wall": "Обои", "n_lang": "Языки", "dyn_h": "Сделайте под себя", "dyn_p": "Динамический цвет — способ Material 3 быть личным. Выберите основной цвет — вся эта страница (и AHome на вашем ТВ) перестроится вокруг него."}, "es": {"lead": "Una pantalla de inicio Material 3 Expressive para Android TV y Google TV, con fondos animados generados.", "get": "Obtener en GitHub", "how": "Cómo instalar", "f1h": "Material 3 Expressive", "f1p": "Superficies tonales, formas redondeadas, foco claro y movimiento de resorte, de serie.", "f2h": "Fondos vivos", "f2p": "21 estilos y 33 paletas, dibujados en vivo y difuminados tras las apps.", "f3h": "Inicio tranquilo", "f3p": "Solo tu dock, el reloj y el tiempo. Abajo: búsqueda y todas las apps.", "f4h": "Para TV modestos", "f4p": "Hilo propio para el fondo, teclas del mando dosificadas y un paquete de 0,6 MB.", "f5h": "Tu idioma", "f5p": "Inglés por defecto; sigue el idioma del sistema y trae 27 traducciones.", "f6h": "Privado", "f6p": "Sin cuentas ni analítica. La única petición de red es la línea del tiempo opcional.", "ih": "Instalar", "ip": "Necesitas Android TV o Google TV con Android 8.0 o superior y ADB. Compila el APK del repositorio y ejecuta:", "ip2": "Pulsa Inicio y elige AHome como lanzador predeterminado.", "by": "Hecho por", "f_nav": "Funciones", "s_nav": "Capturas", "over": "Launcher de TV de código abierto", "s1": "estilos de fondo", "s2": "paletas", "s3": "idiomas", "shots_h": "Capturas de pantalla", "c1": "Inicio", "c2": "Todas las apps", "c3": "Estilos de fondo", "c4": "Paletas", "c5": "Ajustes", "wp_h": "Fondos que se mueven", "wp_p": "Cada estilo se genera a partir de una semilla y se dibuja en vivo en su propio hilo, así que no hay dos inicios iguales. Elige en una cuadrícula de vistas previas o déjate sorprender.", "lang_h": "Habla tu idioma", "lang_p": "Inglés por defecto; la interfaz sigue el idioma del sistema y puedes elegir otro en los ajustes.", "st1": "Consigue el APK", "st2": "Instala por ADB", "st3": "Haz que sea tu Inicio", "copy": "Copiar", "copied": "Copiado", "n_home": "Inicio", "n_wall": "Fondos", "n_lang": "Idiomas", "dyn_h": "Hazlo tuyo", "dyn_p": "El color dinámico es la forma de Material 3 de ser personal. Elige una semilla y todas las superficies de esta página, y de AHome en tu TV, se regeneran a partir de ella."}, "de": {"lead": "Ein Material-3-Expressive-Startbildschirm für Android TV und Google TV mit animierten, generierten Hintergründen.", "get": "Auf GitHub holen", "how": "So installieren", "f1h": "Material 3 Expressive", "f1p": "Tonale Flächen, große Rundungen, klarer Fokus und Federbewegung — serienmäßig.", "f2h": "Lebende Hintergründe", "f2p": "21 Stile und 33 Paletten, live gezeichnet und hinter den Apps weichgezeichnet.", "f3h": "Ruhige Startseite", "f3p": "Nur Dock, Uhr und Wetter. Mit Runter: Suche und alle Apps.", "f4h": "Für schwache TVs", "f4p": "Eigener Render-Thread, gleichmäßige Fernbedienungstasten und ein Paket von 0,6 MB.", "f5h": "Ihre Sprache", "f5p": "Standard Englisch, folgt der Systemsprache, 27 Übersetzungen.", "f6h": "Privat", "f6p": "Keine Konten, keine Analyse. Einzige Netzanfrage: die optionale Wetterzeile.", "ih": "Installation", "ip": "Android TV oder Google TV ab Android 8.0 mit ADB-Zugang. APK aus dem Repository bauen, dann:", "ip2": "Home drücken und AHome als Standard-Launcher wählen.", "by": "Von", "f_nav": "Funktionen", "s_nav": "Screenshots", "over": "Open-Source-TV-Launcher", "s1": "Hintergrundstile", "s2": "Paletten", "s3": "Sprachen", "shots_h": "Screenshots", "c1": "Startseite", "c2": "Alle Apps", "c3": "Hintergrundstile", "c4": "Paletten", "c5": "Einstellungen", "wp_h": "Hintergründe in Bewegung", "wp_p": "Jeder Stil entsteht aus einem Startwert und wird live in einem eigenen Thread gezeichnet — keine zwei Startseiten gleichen sich. Wähle aus einem Vorschau-Raster oder lass dich überraschen.", "lang_h": "Spricht Ihre Sprache", "lang_p": "Standardmäßig Englisch; die Oberfläche folgt der Systemsprache, in den Einstellungen lässt sich eine andere wählen.", "st1": "APK besorgen", "st2": "Per ADB installieren", "st3": "Als Startseite festlegen", "copy": "Kopieren", "copied": "Kopiert", "n_home": "Start", "n_wall": "Hintergründe", "n_lang": "Sprachen", "dyn_h": "Mach es zu deinem", "dyn_p": "Dynamische Farbe ist Material 3s Art, persönlich zu sein. Wähle einen Ausgangston — alle Flächen dieser Seite und von AHome auf deinem TV werden daraus neu berechnet."}, "fr": {"lead": "Un écran d'accueil Material 3 Expressive pour Android TV et Google TV, avec des fonds animés générés.", "get": "Obtenir sur GitHub", "how": "Comment installer", "f1h": "Material 3 Expressive", "f1p": "Surfaces tonales, grandes formes arrondies, focus net et mouvement à ressort, par défaut.", "f2h": "Fonds vivants", "f2p": "21 styles et 33 palettes, dessinés en direct et floutés derrière les applis.", "f3h": "Accueil calme", "f3p": "Seulement votre dock, l'heure et la météo. Bas : recherche et toutes les applis.", "f4h": "Pour TV modestes", "f4p": "Thread dédié au fond, touches de télécommande dosées et un paquet de 0,6 Mo.", "f5h": "Votre langue", "f5p": "Anglais par défaut ; suit la langue du système, 27 traductions.", "f6h": "Privé", "f6p": "Ni compte ni analyse. Seule requête réseau : la ligne météo facultative.", "ih": "Installation", "ip": "Il faut Android TV ou Google TV (Android 8.0+) avec ADB. Compilez l'APK depuis le dépôt, puis :", "ip2": "Appuyez sur Accueil et choisissez AHome comme lanceur par défaut.", "by": "Créé par", "f_nav": "Fonctions", "s_nav": "Captures", "over": "Lanceur TV open source", "s1": "styles de fond", "s2": "palettes", "s3": "langues", "shots_h": "Captures d'écran", "c1": "Accueil", "c2": "Toutes les applis", "c3": "Styles de fond", "c4": "Palettes", "c5": "Réglages", "wp_h": "Des fonds qui bougent", "wp_p": "Chaque style est généré à partir d'une graine et dessiné en direct dans son propre thread : deux accueils ne se ressemblent jamais. Choisissez dans une grille d'aperçus ou laissez-vous surprendre.", "lang_h": "Parle votre langue", "lang_p": "Anglais par défaut ; l'interface suit la langue du système et vous pouvez en choisir une autre dans les réglages.", "st1": "Obtenir l'APK", "st2": "Installer via ADB", "st3": "Définir comme accueil", "copy": "Copier", "copied": "Copié", "n_home": "Accueil", "n_wall": "Fonds", "n_lang": "Langues", "dyn_h": "Faites-le à vous", "dyn_p": "La couleur dynamique est la façon dont Material 3 se personnalise. Choisissez une couleur de départ : toutes les surfaces de cette page, et d'AHome sur votre TV, en sont régénérées."}, "pt": {"lead": "Uma tela inicial Material 3 Expressive para Android TV e Google TV, com papéis de parede animados e gerados.", "get": "Baixar no GitHub", "how": "Como instalar", "f1h": "Material 3 Expressive", "f1p": "Superfícies tonais, formas arredondadas, foco claro e movimento de mola, de fábrica.", "f2h": "Papéis de parede vivos", "f2p": "21 estilos e 33 paletas, desenhados ao vivo e desfocados atrás dos apps.", "f3h": "Início calmo", "f3p": "Só o dock, o relógio e o clima. Para baixo: busca e todos os apps.", "f4h": "Para TVs modestas", "f4p": "Thread própria para o fundo, teclas do controle dosadas e pacote de 0,6 MB.", "f5h": "Seu idioma", "f5p": "Inglês por padrão; segue o idioma do sistema, 27 traduções.", "f6h": "Privado", "f6p": "Sem contas nem análise. A única requisição de rede é a linha do clima opcional.", "ih": "Instalar", "ip": "Requer Android TV ou Google TV com Android 8.0+ e ADB. Compile o APK do repositório e execute:", "ip2": "Pressione Início e escolha o AHome como launcher padrão.", "by": "Feito por", "f_nav": "Recursos", "s_nav": "Capturas", "over": "Launcher de TV de código aberto", "s1": "estilos de papel de parede", "s2": "paletas", "s3": "idiomas", "shots_h": "Capturas de tela", "c1": "Início", "c2": "Todos os apps", "c3": "Estilos de fundo", "c4": "Paletas", "c5": "Configurações", "wp_h": "Papéis de parede que se movem", "wp_p": "Cada estilo é gerado a partir de uma semente e desenhado ao vivo em sua própria thread, então nenhum início é igual. Escolha numa grade de prévias ou deixe-se surpreender.", "lang_h": "Fala o seu idioma", "lang_p": "Inglês por padrão; a interface segue o idioma do sistema e você pode escolher outro nas configurações.", "st1": "Obtenha o APK", "st2": "Instale via ADB", "st3": "Defina como início", "copy": "Copiar", "copied": "Copiado", "n_home": "Início", "n_wall": "Papéis", "n_lang": "Idiomas", "dyn_h": "Deixe com a sua cara", "dyn_p": "A cor dinâmica é o jeito do Material 3 ser pessoal. Escolha uma semente e todas as superfícies desta página, e do AHome na sua TV, são geradas a partir dela."}, "it": {"lead": "Una schermata Home Material 3 Expressive per Android TV e Google TV, con sfondi animati generati.", "get": "Scarica da GitHub", "how": "Come installare", "f1h": "Material 3 Expressive", "f1p": "Superfici tonali, grandi forme arrotondate, focus chiaro e moto a molla, di serie.", "f2h": "Sfondi vivi", "f2p": "21 stili e 33 palette, disegnati dal vivo e sfocati dietro le app.", "f3h": "Home tranquilla", "f3p": "Solo dock, orologio e meteo. Giù: ricerca e tutte le app.", "f4h": "Per TV modeste", "f4p": "Thread dedicato allo sfondo, tasti del telecomando dosati e pacchetto da 0,6 MB.", "f5h": "La tua lingua", "f5p": "Inglese di default; segue la lingua di sistema, 27 traduzioni.", "f6h": "Privato", "f6p": "Niente account né analisi. L'unica richiesta di rete è la riga meteo opzionale.", "ih": "Installazione", "ip": "Serve Android TV o Google TV con Android 8.0+ e ADB. Compila l'APK dal repository, poi:", "ip2": "Premi Home e scegli AHome come launcher predefinito.", "by": "Creato da", "f_nav": "Funzioni", "s_nav": "Schermate", "over": "Launcher TV open source", "s1": "stili di sfondo", "s2": "palette", "s3": "lingue", "shots_h": "Screenshot", "c1": "Home", "c2": "Tutte le app", "c3": "Stili di sfondo", "c4": "Palette", "c5": "Impostazioni", "wp_h": "Sfondi che si muovono", "wp_p": "Ogni stile nasce da un seme ed è disegnato dal vivo in un thread dedicato: due Home non sono mai uguali. Scegli da una griglia di anteprime o lasciati sorprendere.", "lang_h": "Parla la tua lingua", "lang_p": "Inglese di default; l'interfaccia segue la lingua di sistema e puoi sceglierne un'altra nelle impostazioni.", "st1": "Ottieni l'APK", "st2": "Installa via ADB", "st3": "Impostala come Home", "copy": "Copia", "copied": "Copiato", "n_home": "Home", "n_wall": "Sfondi", "n_lang": "Lingue", "dyn_h": "Rendilo tuo", "dyn_p": "Il colore dinamico è il modo di Material 3 di essere personale. Scegli un seme e tutte le superfici di questa pagina, e di AHome sul tuo TV, vengono rigenerate da esso."}, "zh": {"lead": "适用于 Android TV 和 Google TV 的 Material 3 Expressive 主屏幕，带有动态生成壁纸。", "get": "在 GitHub 获取", "how": "如何安装", "f1h": "Material 3 Expressive", "f1p": "默认采用色调表面、大圆角、清晰焦点环和弹簧动效。", "f2h": "动态壁纸", "f2p": "21 种样式、33 套配色，实时绘制并在应用后方模糊。", "f3h": "清爽的主页", "f3p": "只有底栏、时钟和天气。按下键进入搜索和全部应用。", "f4h": "为老电视优化", "f4p": "壁纸独立线程、遥控按键限速，安装包仅 0.6 MB。", "f5h": "你的语言", "f5p": "默认英文，跟随系统语言，提供 27 种翻译。", "f6h": "隐私", "f6p": "无账号、无统计。唯一的网络请求是可选的天气行。", "ih": "安装", "ip": "需要 Android 8.0 及以上的 Android TV 或 Google TV，并开启 ADB。从仓库构建 APK，然后执行：", "ip2": "按主页键，选择 AHome 作为默认启动器。", "by": "作者", "f_nav": "功能", "s_nav": "截图", "over": "开源电视启动器", "s1": "壁纸样式", "s2": "配色", "s3": "种语言", "shots_h": "截图", "c1": "主屏幕", "c2": "全部应用", "c3": "壁纸样式", "c4": "配色", "c5": "设置", "wp_h": "会动的壁纸", "wp_p": "每种样式都由随机种子生成，并在独立线程中实时绘制，所以每个主屏幕都不一样。可以在预览网格中挑选，也可以交给 AHome 随机。", "lang_h": "说你的语言", "lang_p": "默认英文，界面跟随系统语言，也可以在设置里选择其他语言。", "st1": "获取 APK", "st2": "通过 ADB 安装", "st3": "设为主屏幕", "copy": "复制", "copied": "已复制", "n_home": "主页", "n_wall": "壁纸", "n_lang": "语言", "dyn_h": "打造专属风格", "dyn_p": "动态色彩是 Material 3 的个性化方式。选一个种子色，本页和电视上 AHome 的所有表面都会据此重新生成。"}, "ja": {"lead": "Android TV と Google TV 向けの Material 3 Expressive ホーム画面。生成される動く壁紙つき。", "get": "GitHub で入手", "how": "インストール方法", "f1h": "Material 3 Expressive", "f1p": "トーナルな面、大きな角丸、見やすいフォーカス、ばね動作を標準で。", "f2h": "動く壁紙", "f2p": "21 スタイルと 33 パレットをリアルタイム描画し、アプリの背後でぼかします。", "f3h": "静かなホーム", "f3p": "ドック、時計、天気だけ。下キーで検索とすべてのアプリ。", "f4h": "非力なテレビ向け", "f4p": "壁紙は専用スレッド、リモコンキーは一定間隔で処理、パッケージは 0.6 MB。", "f5h": "あなたの言語", "f5p": "既定は英語。システム言語に従い、27 言語に対応。", "f6h": "プライバシー", "f6p": "アカウントも分析もなし。通信は任意の天気表示のみ。", "ih": "インストール", "ip": "Android 8.0 以上の Android TV / Google TV と ADB が必要です。リポジトリから APK をビルドして実行：", "ip2": "ホームキーを押し、AHome を既定のランチャーに選びます。", "by": "作者", "f_nav": "機能", "s_nav": "スクリーンショット", "over": "オープンソースのTVランチャー", "s1": "壁紙スタイル", "s2": "パレット", "s3": "言語", "shots_h": "スクリーンショット", "c1": "ホーム", "c2": "すべてのアプリ", "c3": "壁紙スタイル", "c4": "パレット", "c5": "設定", "wp_h": "動く壁紙", "wp_p": "各スタイルはシードから生成され、専用スレッドでリアルタイムに描画されるので、同じホーム画面は二つとありません。プレビューのグリッドから選ぶか、おまかせで。", "lang_h": "あなたの言語で", "lang_p": "既定は英語。画面はシステム言語に従い、設定で別の言語も選べます。", "st1": "APK を入手", "st2": "ADB でインストール", "st3": "ホームに設定", "copy": "コピー", "copied": "コピーしました", "n_home": "ホーム", "n_wall": "壁紙", "n_lang": "言語", "dyn_h": "自分好みに", "dyn_p": "ダイナミックカラーは Material 3 らしいパーソナライズ。シードを選ぶと、このページとテレビの AHome のすべての面がそこから再生成されます。"}, "ko": {"lead": "Android TV와 Google TV를 위한 Material 3 Expressive 홈 화면. 생성형 움직이는 배경화면 포함.", "get": "GitHub에서 받기", "how": "설치 방법", "f1h": "Material 3 Expressive", "f1p": "톤 서피스, 큰 둥근 모서리, 또렷한 포커스, 스프링 모션이 기본.", "f2h": "움직이는 배경화면", "f2p": "21가지 스타일과 33개 팔레트를 실시간으로 그리고 앱 뒤에서 흐리게 처리합니다.", "f3h": "차분한 홈", "f3p": "독, 시계, 날씨만. 아래로 누르면 검색과 모든 앱.", "f4h": "사양이 낮은 TV용", "f4p": "배경화면 전용 스레드, 리모컨 키 속도 조절, 패키지 0.6MB.", "f5h": "내 언어", "f5p": "기본은 영어, 시스템 언어를 따르며 27개 번역 제공.", "f6h": "개인정보 보호", "f6p": "계정도 분석도 없음. 네트워크는 선택형 날씨 줄에만 사용.", "ih": "설치", "ip": "Android 8.0 이상의 Android TV 또는 Google TV와 ADB가 필요합니다. 저장소에서 APK를 빌드한 뒤:", "ip2": "홈을 누르고 AHome을 기본 런처로 선택하세요.", "by": "제작", "f_nav": "기능", "s_nav": "스크린샷", "over": "오픈소스 TV 런처", "s1": "배경화면 스타일", "s2": "팔레트", "s3": "개 언어", "shots_h": "스크린샷", "c1": "홈", "c2": "모든 앱", "c3": "배경화면 스타일", "c4": "팔레트", "c5": "설정", "wp_h": "움직이는 배경화면", "wp_p": "각 스타일은 시드에서 만들어져 전용 스레드에서 실시간으로 그려져서 똑같은 홈 화면이 없습니다. 미리보기 격자에서 고르거나 AHome에 맡겨 보세요.", "lang_h": "내 언어로", "lang_p": "기본은 영어이며 인터페이스는 시스템 언어를 따르고, 설정에서 다른 언어를 고를 수 있습니다.", "st1": "APK 받기", "st2": "ADB로 설치", "st3": "홈으로 설정", "copy": "복사", "copied": "복사됨", "n_home": "홈", "n_wall": "배경화면", "n_lang": "언어", "dyn_h": "나만의 스타일로", "dyn_p": "동적 색상은 Material 3가 개인화하는 방식입니다. 시드를 고르면 이 페이지와 TV의 AHome 모든 표면이 그에 맞춰 다시 만들어집니다."}, "tr": {"lead": "Android TV ve Google TV için, üretilmiş hareketli duvar kâğıtlı Material 3 Expressive ana ekran.", "get": "GitHub'dan al", "how": "Nasıl kurulur", "f1h": "Material 3 Expressive", "f1p": "Varsayılan olarak tonlu yüzeyler, büyük yuvarlak şekiller, net odak ve yay hareketi.", "f2h": "Canlı duvar kâğıtları", "f2p": "21 stil ve 33 palet, canlı çizilir ve uygulamaların arkasında bulanıklaşır.", "f3h": "Sakin ana ekran", "f3p": "Yalnızca dock, saat ve hava durumu. Aşağı: arama ve tüm uygulamalar.", "f4h": "Zayıf TV'ler için", "f4p": "Duvar kâğıdı için ayrı iş parçacığı, ayarlı kumanda tuşları, 0,6 MB paket.", "f5h": "Dilin", "f5p": "Varsayılan İngilizce; sistem dilini izler, 27 çeviri.", "f6h": "Gizli", "f6p": "Hesap yok, analiz yok. Tek ağ isteği isteğe bağlı hava durumu satırı.", "ih": "Kurulum", "ip": "Android 8.0+ Android TV veya Google TV ve ADB gerekir. APK'yı depodan derleyin, sonra:", "ip2": "Ana ekran tuşuna basın ve AHome'u varsayılan başlatıcı seçin.", "by": "Yapan", "f_nav": "Özellikler", "s_nav": "Ekran görüntüleri", "over": "Açık kaynaklı TV başlatıcı", "s1": "duvar kâğıdı stili", "s2": "palet", "s3": "dil", "shots_h": "Ekran görüntüleri", "c1": "Ana ekran", "c2": "Tüm uygulamalar", "c3": "Duvar kâğıdı stilleri", "c4": "Paletler", "c5": "Ayarlar", "wp_h": "Hareket eden duvar kâğıtları", "wp_p": "Her stil bir tohumdan üretilir ve kendi iş parçacığında canlı çizilir; iki ana ekran asla aynı olmaz. Önizleme ızgarasından seçin ya da AHome'a bırakın.", "lang_h": "Sizin dilinizi konuşur", "lang_p": "Varsayılan İngilizce; arayüz sistem dilini izler, ayarlardan başka bir dil seçebilirsiniz.", "st1": "APK'yı alın", "st2": "ADB ile kurun", "st3": "Ana ekranınız yapın", "copy": "Kopyala", "copied": "Kopyalandı", "n_home": "Ana sayfa", "n_wall": "Duvar kâğıtları", "n_lang": "Diller", "dyn_h": "Kendinize göre yapın", "dyn_p": "Dinamik renk, Material 3'ün kişiselleşme yoludur. Bir tohum seçin; bu sayfanın ve TV'nizdeki AHome'un tüm yüzeyleri ondan yeniden üretilir."}, "pl": {"lead": "Ekran główny Material 3 Expressive dla Android TV i Google TV z animowanymi, generowanymi tapetami.", "get": "Pobierz z GitHuba", "how": "Jak zainstalować", "f1h": "Material 3 Expressive", "f1p": "Tonalne powierzchnie, duże zaokrąglenia, wyraźny fokus i sprężysty ruch — domyślnie.", "f2h": "Żywe tapety", "f2p": "21 stylów i 33 palety, rysowane na żywo i rozmywane za aplikacjami.", "f3h": "Spokojny ekran główny", "f3p": "Tylko dok, zegar i pogoda. W dół: wyszukiwarka i wszystkie aplikacje.", "f4h": "Dla słabych telewizorów", "f4p": "Osobny wątek tapety, dozowane klawisze pilota i pakiet 0,6 MB.", "f5h": "Twój język", "f5p": "Domyślnie angielski; podąża za językiem systemu, 27 tłumaczeń.", "f6h": "Prywatnie", "f6p": "Bez kont i analityki. Jedyne zapytanie sieciowe to opcjonalny wiersz pogody.", "ih": "Instalacja", "ip": "Potrzebny Android TV lub Google TV z Androidem 8.0+ i ADB. Zbuduj APK z repozytorium, potem:", "ip2": "Naciśnij Home i wybierz AHome jako domyślny launcher.", "by": "Autor", "f_nav": "Funkcje", "s_nav": "Zrzuty ekranu", "over": "Otwartoźródłowy launcher TV", "s1": "stylów tapet", "s2": "palet", "s3": "języków", "shots_h": "Zrzuty ekranu", "c1": "Ekran główny", "c2": "Wszystkie aplikacje", "c3": "Style tapet", "c4": "Palety", "c5": "Ustawienia", "wp_h": "Ruchome tapety", "wp_p": "Każdy styl powstaje z ziarna i jest rysowany na żywo we własnym wątku, więc dwa ekrany główne nigdy nie wyglądają tak samo. Wybierz z siatki podglądów albo daj się zaskoczyć.", "lang_h": "Mówi w Twoim języku", "lang_p": "Domyślnie angielski; interfejs podąża za językiem systemu, a inny język wybierzesz w ustawieniach.", "st1": "Pobierz APK", "st2": "Zainstaluj przez ADB", "st3": "Ustaw jako ekran główny", "copy": "Kopiuj", "copied": "Skopiowano", "n_home": "Start", "n_wall": "Tapety", "n_lang": "Języki", "dyn_h": "Spersonalizuj", "dyn_p": "Kolor dynamiczny to sposób Material 3 na personalizację. Wybierz kolor bazowy, a wszystkie powierzchnie tej strony i AHome na telewizorze zostaną z niego wygenerowane."}, "uk": {"lead": "Головний екран Material 3 Expressive для Android TV і Google TV з анімованими згенерованими шпалерами.", "get": "Отримати на GitHub", "how": "Як встановити", "f1h": "Material 3 Expressive", "f1p": "Тональні поверхні, великі заокруглення, чіткий фокус і пружинна анімація — з коробки.", "f2h": "Живі шпалери", "f2p": "21 стиль і 33 палітри, малюються наживо й розмиваються за застосунками.", "f3h": "Спокійна головна", "f3p": "Лише док, годинник і погода. Вниз — пошук і всі застосунки.", "f4h": "Для слабких ТВ", "f4p": "Окремий потік для шпалер, рівні натискання пульта й пакет 0,6 МБ.", "f5h": "Ваша мова", "f5p": "Типово англійська; слідує мові системи, 27 перекладів.", "f6h": "Приватно", "f6p": "Без акаунтів і аналітики. Єдиний запит у мережу — необов'язковий рядок погоди.", "ih": "Встановлення", "ip": "Потрібен Android TV або Google TV з Android 8.0+ та ADB. Зберіть APK з репозиторію й виконайте:", "ip2": "Натисніть Home і оберіть AHome типовим лаунчером.", "by": "Автор", "f_nav": "Можливості", "s_nav": "Знімки екрана", "over": "Лаунчер для ТВ з відкритим кодом", "s1": "стилів шпалер", "s2": "палітри", "s3": "мов", "shots_h": "Знімки екрана", "c1": "Головна", "c2": "Усі застосунки", "c3": "Стилі шпалер", "c4": "Палітри", "c5": "Налаштування", "wp_h": "Шпалери, що рухаються", "wp_p": "Кожен стиль створюється із зерна й малюється наживо в окремому потоці, тож двох однакових головних екранів немає. Обирайте з сітки превʼю або довіртеся випадку.", "lang_h": "Говорить вашою мовою", "lang_p": "Типово англійська; інтерфейс слідує мові системи, а іншу мову можна обрати в налаштуваннях.", "st1": "Отримайте APK", "st2": "Встановіть через ADB", "st3": "Зробіть головним екраном", "copy": "Копіювати", "copied": "Скопійовано", "n_home": "Головна", "n_wall": "Шпалери", "n_lang": "Мови", "dyn_h": "Зробіть під себе", "dyn_p": "Динамічний колір — спосіб Material 3 бути особистим. Оберіть основний колір — уся ця сторінка (і AHome на вашому ТВ) перебудується навколо нього."}}, LANGS = [["en", "English"], ["ru", "Русский"], ["es", "Español"], ["de", "Deutsch"], ["fr", "Français"], ["pt", "Português"], ["it", "Italiano"], ["zh", "中文"], ["ja", "日本語"], ["ko", "한국어"], ["tr", "Türkçe"], ["pl", "Polski"], ["uk", "Українська"]], PALS = [["Terracotta", ["#F3C6A0", "#6B3F24", "#E97A2F", "#D8603B"]], ["Sage", ["#A8DEC2", "#2F8F72", "#25483E", "#DDEFE3"]], ["Ocean", ["#2D5C9A", "#8CC3E4", "#5B95CB", "#1A2C52"]], ["Peony", ["#F2A7D3", "#6A3A6C", "#8E5A99", "#E8A9A2"]], ["Lagoon", ["#1F4F55", "#E05A48", "#8FB9C1", "#1B8A80"]], ["Retro", ["#0F5F6E", "#EC7462", "#EFC07C", "#A7D9DC"]], ["Neon", ["#0D0B1E", "#FF3D8B", "#7B5CFF", "#00E0C6"]], ["Lavender", ["#F1EDFB", "#B9A7E8", "#8A76C8", "#F4C5D8"]], ["Candy", ["#FFE0F0", "#FF4FA3", "#7C4DFF", "#00C2FF"]], ["Indigo", ["#1B2140", "#2E3A73", "#5163B5", "#8FA0E8"]], ["Mint", ["#E9F4EE", "#9ED2C0", "#3E9C84", "#F2A65A"]], ["Coffee", ["#3B2A22", "#D9A77A", "#8C5A3C", "#F1D7B8"]]], LN = ["English", "العربية", "বাংলা", "Català", "Čeština", "Dansk", "Deutsch", "Español", "Suomi", "Français", "עברית", "Bahasa Indonesia", "Italiano", "日本語", "한국어", "Norsk", "Nederlands", "Polski", "Português", "Русский", "Srpski", "ไทย", "Türkçe", "Українська", "O'zbek", "Tiếng Việt", "中文"];
+var STYLES = ['shapes','bauhaus','arches','waves','hills','pebbles','ribbons','rainbow','dots','cosmos','truchet','memphis','sunset','peaks','flowers','rings','stripes','bands','garden','objects','pair'];
+var SEEDS = [['#1E6BFF', 'Blue'], ['#00897B', 'Teal'], ['#43A047', 'Green'], ['#F9A825', 'Amber'], ['#E64A19', 'Orange'], ['#D81B60', 'Pink'], ['#7E57C2', 'Violet']];
+var root = document.documentElement, $ = function (s, c) { return (c || document).querySelector(s); }, $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---- dynamic colour: regenerate every role from a seed ---- */
+function kebab(s) { return s.replace(/[A-Z]/g, function (c) { return '-' + c.toLowerCase(); }); }
+function isDark() { var t = root.getAttribute('data-theme'); return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
+function applyScheme() {
+  var seed = store.get('ahome-seed') || SEEDS[0][0];
+  if (seed === SEEDS[0][0] && !window.M3Color) return;
+  var r = M3Color.roles(seed, isDark());
+  for (var k in r) root.style.setProperty('--md-sys-color-' + kebab(k), r[k]);
+  $('meta[name=theme-color]').setAttribute('content', r.surface);
+  $$('.seed').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.seed === seed)); });
+  var ic = isDark() ? 'light_mode' : 'dark_mode';
+  $$('#themeBtn .ms, #themeBtn2 .ms').forEach(function (n) { n.textContent = ic; });
+}
+function setTheme(t) { if (t) root.setAttribute('data-theme', t); else root.removeAttribute('data-theme'); applyScheme(); }
+setTheme(store.get('ahome-theme'));
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyScheme);
+function toggleTheme() {
+  var next = isDark() ? 'light' : 'dark';
+  var go = function () { setTheme(next); store.set('ahome-theme', next); };
+  if (document.startViewTransition && !reduce) document.startViewTransition(go); else go();
+}
+$('#themeBtn').addEventListener('click', toggleTheme); $('#themeBtn2').addEventListener('click', toggleTheme);
+SEEDS.forEach(function (s) {
+  var b = document.createElement('button'); b.className = 'seed'; b.type = 'button'; b.style.setProperty('--c', s[0]); b.dataset.seed = s[0]; b.setAttribute('aria-label', s[1]); b.setAttribute('aria-pressed', 'false');
+  b.innerHTML = '<span class="ms">check</span>';
+  b.addEventListener('click', function () { var go = function () { store.set('ahome-seed', s[0]); applyScheme(); }; if (document.startViewTransition && !reduce) document.startViewTransition(go); else go(); });
+  $('#seeds').appendChild(b);
+});
+window.addEventListener('load', applyScheme);
+
+/* ---- language ---- */
+var menu = $('#langMenu');
+LANGS.forEach(function (l) { var it = document.createElement('md-menu-item'); it.dataset.lang = l[0]; it.innerHTML = '<div slot="headline">' + l[1] + '</div>'; menu.appendChild(it); });
+function setLang(code) {
+  var d = I18N[code] ? code : 'en', en = I18N.en; root.lang = d;
+  $$('[data-t]').forEach(function (n) { var k = n.getAttribute('data-t'); n.textContent = I18N[d][k] || en[k]; });
+  $$('[data-t-label]').forEach(function (n) { var k = n.getAttribute('data-t-label'); n.setAttribute('label', I18N[d][k] || en[k]); n.label = I18N[d][k] || en[k]; });
+  LANGS.forEach(function (l) { if (l[0] === d) $('#langName').textContent = l[1]; });
+  $$('.rail .dest .lbl, .bar .dest .lbl').forEach(function (n) { var k = n.getAttribute('data-t'); n.textContent = I18N[d][k] || en[k]; });
+}
+$('#langBtn').addEventListener('click', function () { menu.open = !menu.open; });
+menu.addEventListener('close-menu', function (e) { var it = e.detail && e.detail.initiator; if (it && it.dataset && it.dataset.lang) { setLang(it.dataset.lang); store.set('ahome-lang', it.dataset.lang); } });
+setLang(store.get('ahome-lang') || (navigator.language || 'en').toLowerCase().split('-')[0]);
+
+/* ---- app bar elevation, FAB and navigation spy ---- */
+var appBar = $('#top'), fab = $('#fab');
+function onScroll() { appBar.classList.toggle('scrolled', scrollY > 8); fab.classList.toggle('show', scrollY > innerHeight * .7 && scrollY + innerHeight < document.body.scrollHeight - 320); }
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+fab.addEventListener('click', function () { window.open('https://github.com/uxazu/ahome', '_blank', 'noopener'); });
+var secs = $$('main section[data-nav]');
+var spy = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { $$('.dest').forEach(function (d) { d.setAttribute('aria-current', String(d.getAttribute('href') === '#' + e.target.id)); }); } });
+}, { rootMargin: '-45% 0px -50% 0px' });
+secs.forEach(function (s) { spy.observe(s); });
+
+/* ---- spring entrance and count-up ---- */
+var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); count(e.target); } }); }, { threshold: .05, rootMargin: '0px 0px -6% 0px' }) : null;
+function count(n) {
+  $$('[data-count]', n).forEach(function (b) {
+    var to = +b.dataset.count, t0 = performance.now(), dur = 900;
+    if (reduce) return;
+    (function step(t) { var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4); b.textContent = Math.round(to * e * (1 + .08 * Math.sin(p * Math.PI))); if (p < 1) requestAnimationFrame(step); else b.textContent = to; })(t0);
+  });
+}
+$$('.reveal').forEach(function (n) { if (io) io.observe(n); else n.classList.add('in'); });
+
+/* ---- carousel: items scale with their distance from the middle; click opens a container transform ---- */
+var car = $('#carousel');
+var base = $$('.slide', car), N = base.length;
+function copy(s) { var c = s.cloneNode(true); c.setAttribute('aria-hidden', 'true'); c.tabIndex = -1; return c; }
+base.slice().reverse().forEach(function (s) { car.insertBefore(copy(s), car.firstChild); });
+base.forEach(function (s) { car.appendChild(copy(s)); });
+function wrap() {
+  var s = $$('.slide', car), w = s[N].getBoundingClientRect().left - s[0].getBoundingClientRect().left;
+  var pitch = s[1].getBoundingClientRect().left - s[0].getBoundingClientRect().left, lo = snapTargets()[N] - pitch / 2, x = car.scrollLeft, d = 0;
+  if (x < lo) d = w; else if (x >= lo + w) d = -w;
+  if (d) car.scrollLeft = x + d;
+  return d;
+}
+function centre() { car.style.scrollSnapType = 'none'; car.scrollLeft = snapTargets()[N]; car.style.scrollSnapType = ''; }
+var wrapTimer = 0;
+car.addEventListener('scroll', function () { if (dragging || springing) return; clearTimeout(wrapTimer); wrapTimer = setTimeout(wrap, 140); }, { passive: true });
+window.addEventListener('load', centre); addEventListener('resize', centre);
+
+var dragX = 0, dragStart = 0, dragging = false, moved = false, raf = 0, springing = false, samples = [];
+function snapTargets() {
+  var cl = car.getBoundingClientRect().left, max = car.scrollWidth - car.clientWidth;
+  return $$('.slide', car).map(function (s) { var r = s.getBoundingClientRect(); return Math.max(0, Math.min(max, r.left - cl + car.scrollLeft - (car.clientWidth - r.width) / 2)); });
+}
+function nearest(x, ts) { return ts.reduce(function (b, v) { return Math.abs(v - x) < Math.abs(b - x) ? v : b; }, ts[0]); }
+/* critically damped spring (M3 Expressive slow spatial feel) so a fling or an arrow press glides to the slide */
+function springTo(target, v0) {
+  cancelAnimationFrame(raf);
+  if (reduce) { car.scrollLeft = target; wrap(); return; }
+  car.style.scrollSnapType = 'none'; springing = true;
+  var x = car.scrollLeft, v = v0 || 0, last = performance.now(), k = 120, c = 2 * Math.sqrt(k);
+  (function tick(now) {
+    var dt = Math.min(.032, (now - last) / 1000); last = now;
+    v += (k * (target - x) - c * v) * dt; x += v * dt; car.scrollLeft = x;
+    var d = wrap(); if (d) { x += d; target += d; }
+    if (Math.abs(target - x) < .4 && Math.abs(v) < 4) { car.scrollLeft = target; car.style.scrollSnapType = ''; springing = false; return; }
+    raf = requestAnimationFrame(tick);
+  })(last);
+}
+car.addEventListener('pointerdown', function (e) { cancelAnimationFrame(raf); springing = false; car.style.scrollSnapType = ''; if (e.pointerType !== 'mouse' || e.button) return; dragging = true; moved = false; dragX = e.clientX; dragStart = car.scrollLeft; samples = [[performance.now(), e.clientX]]; });
+addEventListener('pointermove', function (e) {
+  if (!dragging) return;
+  var dx = e.clientX - dragX;
+  if (!moved && Math.abs(dx) > 5) { moved = true; car.classList.add('drag'); void car.offsetWidth; }
+  if (moved) { car.scrollLeft = dragStart - dx; var dw = wrap(); if (dw) { dragStart += dw; } samples.push([performance.now(), e.clientX]); if (samples.length > 6) samples.shift(); }
+});
+addEventListener('pointerup', function () {
+  if (!dragging) return; dragging = false;
+  if (!moved) return;
+  car.classList.remove('drag');
+  var n = samples.length, v = 0;
+  if (n > 1 && performance.now() - samples[n - 1][0] < 80) v = -(samples[n - 1][1] - samples[0][1]) / Math.max(1, samples[n - 1][0] - samples[0][0]) * 1000;
+  var ts = snapTargets();
+  springTo(nearest(car.scrollLeft + v * .25, ts), v);
+  setTimeout(function () { moved = false; }, 0);
+});
+car.addEventListener('click', function (e) { if (moved) { e.stopPropagation(); e.preventDefault(); } }, true);
+function slideBy(d) { var ts = snapTargets(), i = ts.indexOf(nearest(car.scrollLeft, ts)); springTo(ts[Math.max(0, Math.min(ts.length - 1, i + d))], 0); }
+$('#prev').addEventListener('click', function () { slideBy(-1); }); $('#next').addEventListener('click', function () { slideBy(1); });
+var viewer = $('#viewer');
+$$('.slide', car).forEach(function (s) {
+  s.addEventListener('click', function () {
+    var img = $('img', s), open = function () { $('#viewerImg').src = img.src; $('#viewerImg').alt = img.alt; $('#viewerTitle').textContent = $('.cap', s).textContent; viewer.show(); };
+    if (document.startViewTransition && !reduce) { img.style.viewTransitionName = 'shot'; var vt = document.startViewTransition(function () { img.style.viewTransitionName = ''; $('#viewerImg').style.viewTransitionName = 'shot'; open(); }); vt.finished.then(function () { $('#viewerImg').style.viewTransitionName = ''; }); } else open();
+  });
+});
+$('#viewerClose').addEventListener('click', function () { viewer.close(); });
+
+/* ---- wallpapers, palettes, languages ---- */
+var tones = ['primary', 'secondary', 'tertiary'];
+STYLES.forEach(function (s, i) { var c = document.createElement('md-assist-chip'); c.className = 'plain'; c.label = s; $('#styles').appendChild(c); });
+PALS.forEach(function (p) { var d = document.createElement('div'); d.className = 'pal'; d.innerHTML = '<div>' + p[1].map(function (c) { return '<i style="background:' + c + '"></i>'; }).join('') + '</div><span>' + p[0] + '</span>'; $('#pals').appendChild(d); });
+LN.forEach(function (n) { var c = document.createElement('md-assist-chip'); c.label = n; $('#langs').appendChild(c); });
+
+/* ---- install tabs and copy ---- */
+var tabs = $('#tabs');
+tabs.addEventListener('change', function () { var adb = tabs.activeTabIndex === 0; $('#p-adb').hidden = !adb; $('#p-build').hidden = adb; });
+var snack = $('#snack'), snackTimer;
+$$('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = b.parentNode.querySelector('code').textContent;
+    var done = function () { $('#snackText').textContent = I18N[root.lang].copied || 'Copied'; snack.classList.add('show'); clearTimeout(snackTimer); snackTimer = setTimeout(function () { snack.classList.remove('show'); }, 2200); };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); else done();
+  });
+});
+
+/* ---- shape morph: radii are interpolated on a spring (M3 Expressive spatial motion) and drawn into an SVG path ---- */
+var NP = 96;
+function rad(fn) { var a = []; for (var i = 0; i < NP; i++) a.push(fn(2 * Math.PI * i / NP)); return a; }
+var SH = [
+  rad(function (a) { return .86 + .10 * Math.cos(9 * a); }),
+  rad(function () { return .94; }),
+  rad(function (a) { return .84 + .12 * Math.cos(8 * a); }),
+  rad(function (a) { var c = Math.abs(Math.cos(a)), s = Math.abs(Math.sin(a)); return .88 / Math.pow(Math.pow(c, 4) + Math.pow(s, 4), .25); }),
+  rad(function (a) { return .86 + .12 * Math.cos(4 * a); }),
+  rad(function (a) { return .82 + .14 * Math.cos(6 * a); })
+];
+function Morph(svg, start, k, z) {
+  this.p = svg.querySelector('path'); this.k = k; this.z = z; this.cur = SH[start].slice(); this.from = this.cur.slice(); this.to = SH[start]; this.t = 1; this.v = 0; this.i = start; this.raf = 0; this.draw();
+}
+Morph.prototype.draw = function () {
+  var d = '', c = this.cur;
+  for (var j = 0; j < NP; j++) { var a = 2 * Math.PI * j / NP; d += (j ? 'L' : 'M') + (50 + 50 * c[j] * Math.cos(a)).toFixed(2) + ' ' + (50 + 50 * c[j] * Math.sin(a)).toFixed(2); }
+  this.p.setAttribute('d', d + 'Z');
+};
+Morph.prototype.go = function (i) {
+  var m = this; m.i = i; m.from = m.cur.slice(); m.to = SH[i]; m.t = 0; m.v = 0;
+  if (reduce) { m.cur = SH[i].slice(); m.draw(); return; }
+  if (m.raf) return;
+  var last = performance.now();
+  (function tick(now) {
+    var dt = Math.min(.032, (now - last) / 1000); last = now;
+    var a = m.k * (1 - m.t) - 2 * m.z * Math.sqrt(m.k) * m.v; m.v += a * dt; m.t += m.v * dt;
+    for (var j = 0; j < NP; j++) m.cur[j] = Math.max(.3, m.from[j] + (m.to[j] - m.from[j]) * m.t);
+    m.draw();
+    if (Math.abs(1 - m.t) < .002 && Math.abs(m.v) < .01) { m.cur = m.to.slice(); m.draw(); m.raf = 0; } else m.raf = requestAnimationFrame(tick);
+  })(last);
+};
+var blobs = [new Morph($('.blob.a'), 0, 380, .6), new Morph($('.blob.b'), 2, 380, .6), new Morph($('.blob.c'), 4, 380, .6)];
+var step = 0;
+function cycle() { step++; blobs.forEach(function (b, n) { b.go((step * (n + 1) + n * 2) % SH.length); }); }
+var cycleTimer = 0, heroArt = $('#heroArt');
+function startCycle() { if (!cycleTimer && !reduce) cycleTimer = setInterval(cycle, 3400); }
+function stopCycle() { clearInterval(cycleTimer); cycleTimer = 0; }
+new IntersectionObserver(function (es) { if (es[0].isIntersecting && !document.hidden) startCycle(); else stopCycle(); }).observe(heroArt);
+document.addEventListener('visibilitychange', function () { if (document.hidden) stopCycle(); });
+heroArt.style.pointerEvents = 'auto'; heroArt.addEventListener('click', cycle);
+</script>
+</body>
+</html>

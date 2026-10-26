@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">설정</string>
+    <string name="ls_appearance">모양</string>
+    <string name="ls_wallpaper">배경화면</string>
+    <string name="ls_home">홈</string>
+    <string name="ls_system">시스템</string>
+    <string name="ls_on">켜짐</string>
+    <string name="ls_off">꺼짐</string>
+    <string name="ls_theme">테마</string>
+    <string name="ls_launcher_theme_library">테마 라이브러리</string>
+    <string name="ls_accent_colour">강조 색상</string>
+    <string name="ls_animations">애니메이션</string>
+    <string name="ls_advanced_effects">고급 효과</string>
+    <string name="ls_highlight_style">강조 표시 스타일</string>
+    <string name="ls_all_theme_options">모든 테마 옵션</string>
+    <string name="ls_every_theme_key">모든 테마 키</string>
+    <string name="ls_animated_wallpaper">움직이는 배경화면</string>
+    <string name="ls_style">스타일</string>
+    <string name="ls_palette">팔레트</string>
+    <string name="ls_dark_version_of_the_palette">팔레트의 어두운 버전</string>
+    <string name="ls_pattern_size">패턴 크기</string>
+    <string name="ls_dimming">어둡게</string>
+    <string name="ls_per_palette">팔레트별</string>
+    <string name="ls_wallpaper_blur">배경화면 흐림</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">앱 목록 뒤에서도 배경화면 움직임</string>
+    <string name="ls_low">낮음</string>
+    <string name="ls_medium">보통</string>
+    <string name="ls_high">높음</string>
+    <string name="ls_maximum">최대</string>
+    <string name="ls_wallpaper_resolution">배경화면 해상도</string>
+    <string name="ls_your_own_picture">내 이미지</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">테마 배경화면 폴더의 이미지</string>
+    <string name="ls_random">무작위</string>
+    <string name="ls_theme_colours">테마 색상</string>
+    <string name="ls_wallpaper_style">배경화면 스타일</string>
+    <string name="ls_wallpaper_palette">배경화면 팔레트</string>
+    <string name="ls_dock_apps">독 앱</string>
+    <string name="ls_dock_only_on_home">홈에는 독만 표시</string>
+    <string name="ls_app_search">앱 검색</string>
+    <string name="ls_columns">열</string>
+    <string name="ls_rows_below_the_dock">독 아래 행</string>
+    <string name="ls_dock_opacity">독 불투명도</string>
+    <string name="ls_clock_size">시계 크기</string>
+    <string name="ls_weather_town">날씨: 도시</string>
+    <string name="ls_town_and_weather">도시와 날씨</string>
+    <string name="ls_temperature_only">온도만</string>
+    <string name="ls_hidden">숨김</string>
+    <string name="ls_weather_line">날씨 줄</string>
+    <string name="ls_reorder_apps">앱 순서 변경</string>
+    <string name="ls_open_on_start">시작 시 열기</string>
+    <string name="ls_follow_the_theme_again">테마를 다시 따르기</string>
+    <string name="ls_done">완료</string>
+    <string name="ls_default_home">기본 홈</string>
+    <string name="ls_tv_settings">TV 설정</string>
+    <string name="search_apps">앱 검색</string>
+    <string name="all_apps">모든 앱</string>
+    <string-array name="weather_conditions">
+        <item>맑음</item>
+        <item>구름 조금</item>
+        <item>흐림</item>
+        <item>안개</item>
+        <item>이슬비</item>
+        <item>비</item>
+        <item>눈</item>
+        <item>소나기</item>
+        <item>뇌우</item>
+    </string-array>
+    <string name="ls_language">언어</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

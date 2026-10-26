@@ -1,0 +1,8 @@
+launcher/.gradle/
+launcher/build/
+launcher/app/build/
+launcher/local.properties
+*.apk
+.idea/
+*.iml
+.DS_Store

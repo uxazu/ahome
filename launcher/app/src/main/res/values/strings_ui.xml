@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Settings</string>
+    <string name="ls_appearance">Appearance</string>
+    <string name="ls_wallpaper">Wallpaper</string>
+    <string name="ls_home">Home</string>
+    <string name="ls_system">System</string>
+    <string name="ls_on">On</string>
+    <string name="ls_off">Off</string>
+    <string name="ls_theme">Theme</string>
+    <string name="ls_launcher_theme_library">Launcher theme library</string>
+    <string name="ls_accent_colour">Accent colour</string>
+    <string name="ls_animations">Animations</string>
+    <string name="ls_advanced_effects">Advanced effects</string>
+    <string name="ls_highlight_style">Highlight style</string>
+    <string name="ls_all_theme_options">All theme options</string>
+    <string name="ls_every_theme_key">Every theme key</string>
+    <string name="ls_animated_wallpaper">Animated wallpaper</string>
+    <string name="ls_style">Style</string>
+    <string name="ls_palette">Palette</string>
+    <string name="ls_dark_version_of_the_palette">Dark version of the palette</string>
+    <string name="ls_pattern_size">Pattern size</string>
+    <string name="ls_dimming">Dimming</string>
+    <string name="ls_per_palette">per palette</string>
+    <string name="ls_wallpaper_blur">Wallpaper blur</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">Wallpaper moves behind the apps</string>
+    <string name="ls_low">Low</string>
+    <string name="ls_medium">Medium</string>
+    <string name="ls_high">High</string>
+    <string name="ls_maximum">Maximum</string>
+    <string name="ls_wallpaper_resolution">Wallpaper resolution</string>
+    <string name="ls_your_own_picture">Your own picture</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Pictures from the theme\'s wallpaper folder</string>
+    <string name="ls_random">Random</string>
+    <string name="ls_theme_colours">Theme colours</string>
+    <string name="ls_wallpaper_style">Wallpaper style</string>
+    <string name="ls_wallpaper_palette">Wallpaper palette</string>
+    <string name="ls_dock_apps">Dock apps</string>
+    <string name="ls_dock_only_on_home">Dock only on Home</string>
+    <string name="ls_app_search">App search</string>
+    <string name="ls_columns">Columns</string>
+    <string name="ls_rows_below_the_dock">Rows below the dock</string>
+    <string name="ls_dock_opacity">Dock opacity</string>
+    <string name="ls_clock_size">Clock size</string>
+    <string name="ls_weather_town">Weather: town</string>
+    <string name="ls_town_and_weather">Town and weather</string>
+    <string name="ls_temperature_only">Temperature only</string>
+    <string name="ls_hidden">Hidden</string>
+    <string name="ls_weather_line">Weather line</string>
+    <string name="ls_reorder_apps">Reorder apps</string>
+    <string name="ls_open_on_start">Open on start</string>
+    <string name="ls_follow_the_theme_again">Follow the theme again</string>
+    <string name="ls_done">Done</string>
+    <string name="ls_default_home">Default Home</string>
+    <string name="ls_tv_settings">TV settings</string>
+    <string name="search_apps">Search apps</string>
+    <string name="all_apps">All apps</string>
+    <string-array name="weather_conditions">
+        <item>Clear</item>
+        <item>Partly cloudy</item>
+        <item>Overcast</item>
+        <item>Fog</item>
+        <item>Drizzle</item>
+        <item>Rain</item>
+        <item>Snow</item>
+        <item>Showers</item>
+        <item>Thunderstorm</item>
+    </string-array>
+    <string name="ls_language">Language</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

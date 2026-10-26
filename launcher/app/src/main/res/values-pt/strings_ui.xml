@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Configurações</string>
+    <string name="ls_appearance">Aparência</string>
+    <string name="ls_wallpaper">Papel de parede</string>
+    <string name="ls_home">Início</string>
+    <string name="ls_system">Sistema</string>
+    <string name="ls_on">Ativado</string>
+    <string name="ls_off">Desativado</string>
+    <string name="ls_theme">Tema</string>
+    <string name="ls_launcher_theme_library">Biblioteca de temas</string>
+    <string name="ls_accent_colour">Cor de destaque</string>
+    <string name="ls_animations">Animações</string>
+    <string name="ls_advanced_effects">Efeitos avançados</string>
+    <string name="ls_highlight_style">Estilo do destaque</string>
+    <string name="ls_all_theme_options">Todas as opções do tema</string>
+    <string name="ls_every_theme_key">Cada chave do tema</string>
+    <string name="ls_animated_wallpaper">Papel de parede animado</string>
+    <string name="ls_style">Estilo</string>
+    <string name="ls_palette">Paleta</string>
+    <string name="ls_dark_version_of_the_palette">Versão escura da paleta</string>
+    <string name="ls_pattern_size">Tamanho do padrão</string>
+    <string name="ls_dimming">Escurecimento</string>
+    <string name="ls_per_palette">conforme a paleta</string>
+    <string name="ls_wallpaper_blur">Desfoque do papel de parede</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">O papel de parede se move atrás dos apps</string>
+    <string name="ls_low">Baixa</string>
+    <string name="ls_medium">Média</string>
+    <string name="ls_high">Alta</string>
+    <string name="ls_maximum">Máxima</string>
+    <string name="ls_wallpaper_resolution">Resolução do papel de parede</string>
+    <string name="ls_your_own_picture">Sua própria imagem</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Imagens da pasta de papéis de parede do tema</string>
+    <string name="ls_random">Aleatório</string>
+    <string name="ls_theme_colours">Cores do tema</string>
+    <string name="ls_wallpaper_style">Estilo do papel de parede</string>
+    <string name="ls_wallpaper_palette">Paleta do papel de parede</string>
+    <string name="ls_dock_apps">Apps do dock</string>
+    <string name="ls_dock_only_on_home">Só o dock no Início</string>
+    <string name="ls_app_search">Busca de apps</string>
+    <string name="ls_columns">Colunas</string>
+    <string name="ls_rows_below_the_dock">Linhas abaixo do dock</string>
+    <string name="ls_dock_opacity">Opacidade do dock</string>
+    <string name="ls_clock_size">Tamanho do relógio</string>
+    <string name="ls_weather_town">Clima: cidade</string>
+    <string name="ls_town_and_weather">Cidade e clima</string>
+    <string name="ls_temperature_only">Só a temperatura</string>
+    <string name="ls_hidden">Oculto</string>
+    <string name="ls_weather_line">Linha do clima</string>
+    <string name="ls_reorder_apps">Reordenar apps</string>
+    <string name="ls_open_on_start">Abrir ao iniciar</string>
+    <string name="ls_follow_the_theme_again">Voltar a seguir o tema</string>
+    <string name="ls_done">Pronto</string>
+    <string name="ls_default_home">Início padrão</string>
+    <string name="ls_tv_settings">Configurações da TV</string>
+    <string name="search_apps">Buscar apps</string>
+    <string name="all_apps">Todos os apps</string>
+    <string-array name="weather_conditions">
+        <item>Limpo</item>
+        <item>Parcialmente nublado</item>
+        <item>Nublado</item>
+        <item>Neblina</item>
+        <item>Garoa</item>
+        <item>Chuva</item>
+        <item>Neve</item>
+        <item>Pancadas</item>
+        <item>Trovoada</item>
+    </string-array>
+    <string name="ls_language">Idioma</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">設定</string>
+    <string name="ls_appearance">外観</string>
+    <string name="ls_wallpaper">壁紙</string>
+    <string name="ls_home">ホーム</string>
+    <string name="ls_system">システム</string>
+    <string name="ls_on">オン</string>
+    <string name="ls_off">オフ</string>
+    <string name="ls_theme">テーマ</string>
+    <string name="ls_launcher_theme_library">テーマライブラリ</string>
+    <string name="ls_accent_colour">アクセントカラー</string>
+    <string name="ls_animations">アニメーション</string>
+    <string name="ls_advanced_effects">高度な効果</string>
+    <string name="ls_highlight_style">ハイライトのスタイル</string>
+    <string name="ls_all_theme_options">すべてのテーマ設定</string>
+    <string name="ls_every_theme_key">すべてのテーマキー</string>
+    <string name="ls_animated_wallpaper">動く壁紙</string>
+    <string name="ls_style">スタイル</string>
+    <string name="ls_palette">パレット</string>
+    <string name="ls_dark_version_of_the_palette">パレットのダーク版</string>
+    <string name="ls_pattern_size">パターンの大きさ</string>
+    <string name="ls_dimming">暗さ</string>
+    <string name="ls_per_palette">パレットごと</string>
+    <string name="ls_wallpaper_blur">壁紙のぼかし</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">アプリ一覧でも壁紙を動かす</string>
+    <string name="ls_low">低</string>
+    <string name="ls_medium">中</string>
+    <string name="ls_high">高</string>
+    <string name="ls_maximum">最大</string>
+    <string name="ls_wallpaper_resolution">壁紙の解像度</string>
+    <string name="ls_your_own_picture">自分の画像</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">テーマの壁紙フォルダの画像</string>
+    <string name="ls_random">ランダム</string>
+    <string name="ls_theme_colours">テーマの色</string>
+    <string name="ls_wallpaper_style">壁紙のスタイル</string>
+    <string name="ls_wallpaper_palette">壁紙のパレット</string>
+    <string name="ls_dock_apps">ドックのアプリ</string>
+    <string name="ls_dock_only_on_home">ホームにはドックのみ</string>
+    <string name="ls_app_search">アプリ検索</string>
+    <string name="ls_columns">列数</string>
+    <string name="ls_rows_below_the_dock">ドック下の行数</string>
+    <string name="ls_dock_opacity">ドックの不透明度</string>
+    <string name="ls_clock_size">時計の大きさ</string>
+    <string name="ls_weather_town">天気：都市</string>
+    <string name="ls_town_and_weather">都市と天気</string>
+    <string name="ls_temperature_only">気温のみ</string>
+    <string name="ls_hidden">非表示</string>
+    <string name="ls_weather_line">天気の行</string>
+    <string name="ls_reorder_apps">アプリの並べ替え</string>
+    <string name="ls_open_on_start">起動時に開く</string>
+    <string name="ls_follow_the_theme_again">テーマに再び従う</string>
+    <string name="ls_done">完了</string>
+    <string name="ls_default_home">既定のホーム</string>
+    <string name="ls_tv_settings">テレビの設定</string>
+    <string name="search_apps">アプリを検索</string>
+    <string name="all_apps">すべてのアプリ</string>
+    <string-array name="weather_conditions">
+        <item>晴れ</item>
+        <item>晴れ時々曇り</item>
+        <item>曇り</item>
+        <item>霧</item>
+        <item>霧雨</item>
+        <item>雨</item>
+        <item>雪</item>
+        <item>にわか雨</item>
+        <item>雷雨</item>
+    </string-array>
+    <string name="ls_language">言語</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">设置</string>
+    <string name="ls_appearance">外观</string>
+    <string name="ls_wallpaper">壁纸</string>
+    <string name="ls_home">主屏幕</string>
+    <string name="ls_system">系统</string>
+    <string name="ls_on">开</string>
+    <string name="ls_off">关</string>
+    <string name="ls_theme">主题</string>
+    <string name="ls_launcher_theme_library">主题库</string>
+    <string name="ls_accent_colour">强调色</string>
+    <string name="ls_animations">动画</string>
+    <string name="ls_advanced_effects">高级效果</string>
+    <string name="ls_highlight_style">高亮样式</string>
+    <string name="ls_all_theme_options">全部主题选项</string>
+    <string name="ls_every_theme_key">所有主题键</string>
+    <string name="ls_animated_wallpaper">动态壁纸</string>
+    <string name="ls_style">样式</string>
+    <string name="ls_palette">调色板</string>
+    <string name="ls_dark_version_of_the_palette">调色板的深色版本</string>
+    <string name="ls_pattern_size">图案大小</string>
+    <string name="ls_dimming">压暗</string>
+    <string name="ls_per_palette">随调色板</string>
+    <string name="ls_wallpaper_blur">壁纸模糊</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">应用列表后壁纸继续动</string>
+    <string name="ls_low">低</string>
+    <string name="ls_medium">中</string>
+    <string name="ls_high">高</string>
+    <string name="ls_maximum">最高</string>
+    <string name="ls_wallpaper_resolution">壁纸分辨率</string>
+    <string name="ls_your_own_picture">自选图片</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">主题壁纸文件夹中的图片</string>
+    <string name="ls_random">随机</string>
+    <string name="ls_theme_colours">主题颜色</string>
+    <string name="ls_wallpaper_style">壁纸样式</string>
+    <string name="ls_wallpaper_palette">壁纸调色板</string>
+    <string name="ls_dock_apps">底栏应用</string>
+    <string name="ls_dock_only_on_home">主屏幕只显示底栏</string>
+    <string name="ls_app_search">应用搜索</string>
+    <string name="ls_columns">列数</string>
+    <string name="ls_rows_below_the_dock">底栏下方行数</string>
+    <string name="ls_dock_opacity">底栏不透明度</string>
+    <string name="ls_clock_size">时钟大小</string>
+    <string name="ls_weather_town">天气：城市</string>
+    <string name="ls_town_and_weather">城市和天气</string>
+    <string name="ls_temperature_only">仅温度</string>
+    <string name="ls_hidden">隐藏</string>
+    <string name="ls_weather_line">天气行</string>
+    <string name="ls_reorder_apps">重新排列应用</string>
+    <string name="ls_open_on_start">启动时打开</string>
+    <string name="ls_follow_the_theme_again">重新跟随主题</string>
+    <string name="ls_done">完成</string>
+    <string name="ls_default_home">默认主屏幕</string>
+    <string name="ls_tv_settings">电视设置</string>
+    <string name="search_apps">搜索应用</string>
+    <string name="all_apps">全部应用</string>
+    <string-array name="weather_conditions">
+        <item>晴</item>
+        <item>少云</item>
+        <item>阴</item>
+        <item>雾</item>
+        <item>毛毛雨</item>
+        <item>雨</item>
+        <item>雪</item>
+        <item>阵雨</item>
+        <item>雷暴</item>
+    </string-array>
+    <string name="ls_language">语言</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>

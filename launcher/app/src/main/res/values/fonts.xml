@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The UI fonts, looked up through these strings so a locale can swap in a system family: 
+     Google Sans, bundled as Latin and Cyrillic subsets.-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ReferenceType">
+    <string name="font_body" translatable="false">@font/gsans_regular</string>
+    <string name="font_regular" translatable="false">@font/gsans_regular</string>
+    <string name="font_light" translatable="false">@font/gsans_regular</string>
+    <string name="font_extralight" translatable="false">@font/gsans_regular</string>
+    <string name="font_medium" translatable="false">@font/gsans_medium</string>
+</resources>

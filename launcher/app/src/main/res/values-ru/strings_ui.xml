@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Настройки</string>
+    <string name="ls_appearance">Внешний вид</string>
+    <string name="ls_wallpaper">Обои</string>
+    <string name="ls_home">Главный экран</string>
+    <string name="ls_system">Система</string>
+    <string name="ls_on">Включено</string>
+    <string name="ls_off">Выключено</string>
+    <string name="ls_theme">Тема</string>
+    <string name="ls_launcher_theme_library">Библиотека тем лаунчера</string>
+    <string name="ls_accent_colour">Акцентный цвет</string>
+    <string name="ls_animations">Анимации</string>
+    <string name="ls_advanced_effects">Продвинутые эффекты</string>
+    <string name="ls_highlight_style">Стиль подсветки</string>
+    <string name="ls_all_theme_options">Все параметры темы</string>
+    <string name="ls_every_theme_key">Каждый ключ темы</string>
+    <string name="ls_animated_wallpaper">Анимированные обои</string>
+    <string name="ls_style">Стиль</string>
+    <string name="ls_palette">Палитра</string>
+    <string name="ls_dark_version_of_the_palette">Тёмная версия палитры</string>
+    <string name="ls_pattern_size">Размер узора</string>
+    <string name="ls_dimming">Затемнение</string>
+    <string name="ls_per_palette">своё у палитры</string>
+    <string name="ls_wallpaper_blur">Размытие обоев</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">Обои движутся в списке приложений</string>
+    <string name="ls_low">Низкое</string>
+    <string name="ls_medium">Среднее</string>
+    <string name="ls_high">Высокое</string>
+    <string name="ls_maximum">Максимум</string>
+    <string name="ls_wallpaper_resolution">Разрешение обоев</string>
+    <string name="ls_your_own_picture">Своя картинка</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Картинки из папки обоев темы</string>
+    <string name="ls_random">Случайно</string>
+    <string name="ls_theme_colours">Цвета темы</string>
+    <string name="ls_wallpaper_style">Стиль обоев</string>
+    <string name="ls_wallpaper_palette">Палитра обоев</string>
+    <string name="ls_dock_apps">Приложения в доке</string>
+    <string name="ls_dock_only_on_home">Только док на главной</string>
+    <string name="ls_app_search">Поиск приложений</string>
+    <string name="ls_columns">Колонок</string>
+    <string name="ls_rows_below_the_dock">Рядов под доком</string>
+    <string name="ls_dock_opacity">Прозрачность дока</string>
+    <string name="ls_clock_size">Размер часов</string>
+    <string name="ls_weather_town">Погода: город</string>
+    <string name="ls_town_and_weather">Город и погода</string>
+    <string name="ls_temperature_only">Только температура</string>
+    <string name="ls_hidden">Скрыть</string>
+    <string name="ls_weather_line">Показ погоды</string>
+    <string name="ls_reorder_apps">Изменить порядок приложений</string>
+    <string name="ls_open_on_start">Открывать при включении</string>
+    <string name="ls_follow_the_theme_again">Вернуть настройки темы</string>
+    <string name="ls_done">Готово</string>
+    <string name="ls_default_home">Главный экран по умолчанию</string>
+    <string name="ls_tv_settings">Настройки ТВ</string>
+    <string name="search_apps">Поиск приложений</string>
+    <string name="all_apps">Все приложения</string>
+    <string-array name="weather_conditions">
+        <item>Ясно</item>
+        <item>Малооблачно</item>
+        <item>Пасмурно</item>
+        <item>Туман</item>
+        <item>Морось</item>
+        <item>Дождь</item>
+        <item>Снег</item>
+        <item>Ливень</item>
+        <item>Гроза</item>
+    </string-array>
+    <string name="ls_language">Язык</string>
+    <string name="ls_check_update">Проверить обновления</string>
+    <string name="ls_update_checking">Проверяю…</string>
+    <string name="ls_update_none">У вас последняя версия (%s).</string>
+    <string name="ls_update_new">Доступна версия %1$s (у вас %2$s).</string>
+    <string name="ls_update_failed">Не удалось проверить обновления. Проверьте сеть.</string>
+    <string name="ls_update_open">Открыть страницу</string>
+</resources>

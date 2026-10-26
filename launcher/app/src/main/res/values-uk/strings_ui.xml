@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ls_settings">Налаштування</string>
+    <string name="ls_appearance">Вигляд</string>
+    <string name="ls_wallpaper">Шпалери</string>
+    <string name="ls_home">Головний екран</string>
+    <string name="ls_system">Система</string>
+    <string name="ls_on">Увімкнено</string>
+    <string name="ls_off">Вимкнено</string>
+    <string name="ls_theme">Тема</string>
+    <string name="ls_launcher_theme_library">Бібліотека тем</string>
+    <string name="ls_accent_colour">Акцентний колір</string>
+    <string name="ls_animations">Анімації</string>
+    <string name="ls_advanced_effects">Розширені ефекти</string>
+    <string name="ls_highlight_style">Стиль підсвічування</string>
+    <string name="ls_all_theme_options">Усі параметри теми</string>
+    <string name="ls_every_theme_key">Кожен ключ теми</string>
+    <string name="ls_animated_wallpaper">Анімовані шпалери</string>
+    <string name="ls_style">Стиль</string>
+    <string name="ls_palette">Палітра</string>
+    <string name="ls_dark_version_of_the_palette">Темна версія палітри</string>
+    <string name="ls_pattern_size">Розмір візерунка</string>
+    <string name="ls_dimming">Затемнення</string>
+    <string name="ls_per_palette">за палітрою</string>
+    <string name="ls_wallpaper_blur">Розмиття шпалер</string>
+    <string name="ls_wallpaper_moves_behind_the_apps">Шпалери рухаються за списком застосунків</string>
+    <string name="ls_low">Низька</string>
+    <string name="ls_medium">Середня</string>
+    <string name="ls_high">Висока</string>
+    <string name="ls_maximum">Максимальна</string>
+    <string name="ls_wallpaper_resolution">Роздільність шпалер</string>
+    <string name="ls_your_own_picture">Власне зображення</string>
+    <string name="ls_pictures_from_the_theme_s_wallpaper_fo">Зображення з теки шпалер теми</string>
+    <string name="ls_random">Випадково</string>
+    <string name="ls_theme_colours">Кольори теми</string>
+    <string name="ls_wallpaper_style">Стиль шпалер</string>
+    <string name="ls_wallpaper_palette">Палітра шпалер</string>
+    <string name="ls_dock_apps">Застосунки в доку</string>
+    <string name="ls_dock_only_on_home">Лише док на головному екрані</string>
+    <string name="ls_app_search">Пошук застосунків</string>
+    <string name="ls_columns">Колонок</string>
+    <string name="ls_rows_below_the_dock">Рядів під доком</string>
+    <string name="ls_dock_opacity">Прозорість дока</string>
+    <string name="ls_clock_size">Розмір годинника</string>
+    <string name="ls_weather_town">Погода: місто</string>
+    <string name="ls_town_and_weather">Місто й погода</string>
+    <string name="ls_temperature_only">Лише температура</string>
+    <string name="ls_hidden">Приховано</string>
+    <string name="ls_weather_line">Рядок погоди</string>
+    <string name="ls_reorder_apps">Змінити порядок застосунків</string>
+    <string name="ls_open_on_start">Відкривати при запуску</string>
+    <string name="ls_follow_the_theme_again">Знову слідувати темі</string>
+    <string name="ls_done">Готово</string>
+    <string name="ls_default_home">Головний екран за замовчуванням</string>
+    <string name="ls_tv_settings">Налаштування телевізора</string>
+    <string name="search_apps">Пошук застосунків</string>
+    <string name="all_apps">Усі застосунки</string>
+    <string-array name="weather_conditions">
+        <item>Ясно</item>
+        <item>Мінлива хмарність</item>
+        <item>Похмуро</item>
+        <item>Туман</item>
+        <item>Мжичка</item>
+        <item>Дощ</item>
+        <item>Сніг</item>
+        <item>Злива</item>
+        <item>Гроза</item>
+    </string-array>
+    <string name="ls_language">Мова</string>
+    <string name="ls_check_update">Check for updates</string>
+    <string name="ls_update_checking">Checking…</string>
+    <string name="ls_update_none">You have the latest version (%s).</string>
+    <string name="ls_update_new">Version %1$s is available (you have %2$s).</string>
+    <string name="ls_update_failed">Could not check for updates. Check the network.</string>
+    <string name="ls_update_open">Open page</string>
+</resources>
